@@ -10,3 +10,16 @@
 body *{
     outline: 1px solid red;
 }
+
+/* header 영역 */
+.top{
+    height: 100px;
+    display: flex;
+}
+
+
+
+/* footer 영역 */
+.info{
+
+}
