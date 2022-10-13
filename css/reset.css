@@ -17,8 +17,8 @@ a{
     text-decoration: none;
 }
 
-/* 이미지 기본 CSS*/
-img{
+/* 이미지, 버튼 기본 CSS*/
+img, button{
     /* 이미지 링크 시 기본 보더 제거 */
     border: none;
 

@@ -13,13 +13,34 @@ body *{
 
 /* header 영역 */
 .top{
-    height: 100px;
+    height: 70px;
     display: flex;
 }
 
+.logo, .lgtxt{
+    text-align: center;
+    line-height: 70px;
+}
 
+.top .mnbx{
+    margin-left: auto;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.top .mnbx::before{
+    content: '≡';
+    display: block;
+}
 
 /* footer 영역 */
-.info{
+#info{
+    background-color: black;
+    color: white
+}
 
+.info{
+    bottom: 0;
+    height: 400px;
+    display: flex;
 }
