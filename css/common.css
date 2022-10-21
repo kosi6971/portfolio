@@ -1,4 +1,38 @@
 @charset "utf-8";
 /* 공통 모듈 CSS - common.css */
 
+/* header 영역 */
+.top{
+    /* 임시 높이값 */
+    height: 70px;
+    display: flex;
+}
 
+.logo, .lgtxt{
+    text-align: center;
+    line-height: 70px;
+}
+
+.top .mnbtn{
+    margin-left: auto;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.top .mnbtn::before{
+    content: '≡';
+    display: block;
+}
+
+/* footer 영역 */
+#info{
+    background-color: black;
+    color: white
+}
+
+.info{
+    bottom: 0;
+    /* 임시 높이값 */
+    height: 400px;
+    display: flex;
+}

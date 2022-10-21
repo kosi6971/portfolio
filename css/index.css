@@ -11,38 +11,3 @@ body *{
     outline: 1px solid red;
 }
 
-/* header 영역 */
-.top{
-    /* 임시 높이값 */
-    height: 70px;
-    display: flex;
-}
-
-.logo, .lgtxt{
-    text-align: center;
-    line-height: 70px;
-}
-
-.top .mnbx{
-    margin-left: auto;
-    margin-right: 10px;
-    background-color: rgba(255, 255, 255, 0);
-}
-
-.top .mnbx::before{
-    content: '≡';
-    display: block;
-}
-
-/* footer 영역 */
-#info{
-    background-color: black;
-    color: white
-}
-
-.info{
-    bottom: 0;
-    /* 임시 높이값 */
-    height: 400px;
-    display: flex;
-}
