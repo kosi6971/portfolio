@@ -5,6 +5,7 @@
 /* 전체 글자 크기 root 셋팅 */
 html{
     font-size: 10px;
+    text-align: center;
 }
 
 /* 레이아웃 class */
@@ -23,6 +24,6 @@ html{
 
 /* 속박스 class */
 .ibx{
-    max-width: 1800px;
+    max-width: 1600px;
     margin: 0 auto;
 }

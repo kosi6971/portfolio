@@ -31,8 +31,9 @@
 }
 
 .info{
+    display: flex;
+    text-align: initial;
     bottom: 0;
     /* 임시 높이값 */
     height: 400px;
-    display: flex;
 }
