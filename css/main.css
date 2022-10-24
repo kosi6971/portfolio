@@ -40,12 +40,12 @@ body *{
 
 /* 배경 사진 */
 .bg1{
-    background: url(/img/card-collection.png) no-repeat center 55%/90%;
+    background: url(../img/card-collection.png) no-repeat center 55%/90%;
 }
 
 .bg2{
     /* 임시 배경 */
-    background: url(/img/card-collection.png) no-repeat center 55%/90%;
+    background: url(../img/card-collection.png) no-repeat center 55%/90%;
 }
 
 /* 글자 셋팅 */
