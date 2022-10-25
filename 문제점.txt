@@ -11,3 +11,14 @@
    떨어지는 사람과 구멍의 위치와 겹치기에 위치 선정에 있어 어려움이 있다.
 
 5. 
+_________________________
+credits
+개발자 : 
+kr.sil - 웹 개발
+
+협력자 : 
+bbi_yak - 로고 제작
+tombap8 - 도움
+
+출처 :
+https://atelier.net/social-mobility/

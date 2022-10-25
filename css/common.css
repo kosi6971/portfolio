@@ -14,19 +14,27 @@ body{
 /* header 영역 */
 .top{
     /* 임시 높이값 */
-    height: 70px;
+    height: 90px;
     display: flex;
 }
 
-.logo, .lgtxt{
+.logo{
+    margin: 12px;
+}
+
+.lgtxt{
     text-align: center;
-    line-height: 70px;
+    width: 230px;
+    margin-top: 7.6px;
+    padding: 0 15px;
+    font-size: 15px;
+    font-family: 'Caveat', cursive;
 }
 
 .top .mnbtn{
-    width: 35px;
-    height: 35px;
-    margin-top: 17.5px;
+    width: 45px;
+    height: 45px;
+    margin-top: 12.5px;
     margin-left: auto;
     margin-right: 30px;
     line-height: 35px;
@@ -36,7 +44,7 @@ body{
 .top .mnbtn::before{
     content: '≡';
     display: block;
-    font-size: 35px;
+    font-size: 65px;
 }
 
 /* footer 영역 */
