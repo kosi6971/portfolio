@@ -11,7 +11,12 @@ body{
     background: url("../img/main-bg.jpg");
 }
 
-/* header 영역 */
+
+/*********** header ***********/
+#top{
+    border-bottom: 1px solid;
+}
+
 .top{
     /* 임시 높이값 */
     height: 90px;
@@ -46,8 +51,10 @@ body{
     display: block;
     font-size: 65px;
 }
+/*********** header ***********/
 
-/* footer 영역 */
+
+/*********** footer ***********/
 #info{
     background-color: black;
     color: white
@@ -60,3 +67,34 @@ body{
     /* 임시 높이값 */
     height: 400px;
 }
+
+
+.email, .help{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.help{
+    text-align: right;
+    border-left: 2px solid rgb(214, 214, 214);
+    box-sizing: border-box;
+}
+
+.ftlg{
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.ex{
+    padding: 20px 0 8px;
+}
+
+.ver{
+    margin-top: auto;
+    padding: 12px 15px;
+    font-size: 15px;
+    font-family: 'Cormorant', serif;
+}
+/*********** footer ***********/
