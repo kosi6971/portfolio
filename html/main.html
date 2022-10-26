@@ -6,6 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
+    <script src="../jq/jq-ver/jquery-3.6.0.min.js"></script>
+    <script>
+        $(()=>{
+            // 체크 여부
+            let chk = 0;
+            $(".chkbx").click(function(){
+                // input 체크 여부
+                const on = $(".chknn").is("checked");
+
+                if(chk){
+                    $(this).css({backgroundColor:"black"});
+                    chk = 0;
+                }
+                else{
+                    $(".chkbx").css({backgroundColor:"black"});
+                    $(this).css({backgroundColor:"white"});
+                    chk++;
+                }
+
+                console.log(idx);
+
+
+            });
+
+        });
+    </script>
     <title>main</title>
 </head>
 
@@ -127,20 +153,23 @@
                 <!-- 이메일 입력란 -->
                 <div>
                     <h3 class="ex">Email</h3>
-                    <input type="text">
+                    <input class="embox" type="text">
                 </div>
                 <!-- 국적 확인 -->
                 <div>
                     <h3 class="ex">Select languages</h3>
-                    <input type="radio" name="em" id="ko">
-                    <label for="ko">KOREA</label>
-                    <input type="radio" name="em" id="fr">
-                    <label for="fr">FRENCH</label>
-                    <input type="radio" name="em" id="en">
-                    <label for="en">ENGLISH</label>
+                    <input class="chknn" type="checkbox" name="em" id="ko">
+                    <label class="chkbx" for="chk1"></label>
+                    <label class="nat" for="ko">KOREA</label>
+                    <input class="chknn" type="checkbox" name="em" id="fr">
+                    <label class="chkbx" for="chk1"></label>
+                    <label class="nat" for="fr">FRENCH</label>
+                    <input class="chknn" type="checkbox" name="em" id="en">
+                    <label class="chkbx" for="chk1"></label>
+                    <label class="nat" for="en">ENGLISH</label>
                 </div>
                 <!-- 확인 버튼 -->
-                <button>SUBMIT</button>
+                <button class="ftbtn">SUBMIT</button>
                 <!-- 안내 -->
                 <h3 class="ver">
                     Your e-mail address is used to send you newsletters and marketing information on kosi.<br>

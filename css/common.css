@@ -5,6 +5,7 @@
 html{
     font-size: 10px;
     text-align: center;
+    user-select: none;
 }
 
 body{
@@ -65,7 +66,7 @@ body{
     text-align: initial;
     bottom: 0;
     /* 임시 높이값 */
-    height: 400px;
+    height: 550px;
 }
 
 
@@ -83,12 +84,63 @@ body{
 
 .ftlg{
     font-family: 'Nunito', sans-serif;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
 }
 
 .ex{
-    padding: 20px 0 8px;
+    padding: 38px 0 8px;
+    font-size: 25px;
+}
+
+.embox{
+    border: 3px solid white;
+    padding: 0 23px;
+    width: 61%;
+    height: 50px;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(124, 124, 124);
+}
+
+.chknn{
+    display: none;
+}
+
+.chkbx{
+    position: relative;
+    display: inline-block;
+    margin: 0 10px 0 30px;
+    border: 3px solid white;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.chkbx:hover{
+    background-color: rgba(255, 255, 255, 0.76);
+}
+
+.chkbx::after{
+    content: '✔';
+    position: absolute;
+    margin-left: 5px;
+    line-height: 26px;
+    font-size: 25px;
+    color: black;
+}
+
+.nat{
+    font-size: 20px;
+    font-family: 'Cormorant', serif;
+    font-weight: bold;
+}
+
+.ftbtn{
+    margin: 42px 0 0 28px;
+    width: 180px;
+    height: 56px;
 }
 
 .ver{
