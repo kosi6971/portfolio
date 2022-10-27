@@ -9,6 +9,35 @@
     <script src="../jq/jq-ver/jquery-3.6.0.min.js"></script>
     <script>
         $(()=>{
+            // 메뉴창 뜨게 만들기
+            $(".mnbtn").click(()=>{
+                $(".menu").animate({
+                    height:"100%"
+                }, 500);
+            });
+
+            // 메뉴창 사라지게 만들기
+            $(".cnbtn").click(()=>{
+                $(".menu").animate({
+                    height:"0"
+                }, 500);
+            });
+
+            // credits창 뜨게 만들기
+            $(".crbtn1").click(()=>{
+                $(".credits").animate({
+                    width:"40%"
+                }, 500);
+            });
+
+            // credits창 사라지게 만들기
+            $(".crbtn2").click(()=>{
+                $(".credits").animate({
+                    width:"0"
+                }, 500);
+            });
+
+            // 체크 박스 체크 하나만 되게 만들기
             $(".chkbx").click(function(){
                 let on = $(".chknn").is(":checked");
 
@@ -54,7 +83,11 @@
                     <img src="../img/kosi.png" alt="로고">
                 </a>
                 <!-- 스토리  -->
-
+                <p class="sto">
+                    THE STORY OF HOW TECHNOLOGY HASTENS,<br>
+                    PREVENTS AND CHANGES THE DYNAMICS OF<br>
+                    SOCIAL MOBILITY.
+                </p>
                 <!-- 크레딧 -->
                 <button class="crbtn1">credits</button>
             </div>
@@ -176,7 +209,7 @@
                     <img src="../img/kosi.png" alt="로고">
                 </a>
                 <!-- 기타 링크 -->
-                <div class="etctxt">etctxt</div>
+                <div class="etctxt">HELP PAGE</div>
                 <div class="etc">
                     <ul>
                         <li>
@@ -214,14 +247,14 @@
         </p>
         <span class="duty">collaborators : </span>
         <p class="name">
-            bbi_yak - logo production
+            bbi_yak - logo production<br>
             tombap8 - aid
         </p>
         <!-- 사이트 출처 -->
         <blockquote class="sor">
             sources :<br>
-            https://atelier.net/social-mobility/<br>
-            https://www.w3schools.com/
+            <a href="https://atelier.net/social-mobility/">https://atelier.net/social-mobility/</a><br>
+            <a href="https://www.w3schools.com/">https://www.w3schools.com/</a>
         </blockquote>
     </div>
 
@@ -237,7 +270,7 @@
                 <button class="cnbtn">X</button>
             </div>
             <!-- 소개 -->
-            <a href="#" class="mntxt">Introduction</a>
+            <a href="main.html" class="mntxt">Introduction</a>
             <!-- 서브 페이지1 이동 -->
             <h5 class="mnex">PART1</h5>
             <a href="#" class="mntxt"><p>A promise Broken</p></a>

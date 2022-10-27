@@ -54,6 +54,12 @@ body{
     display: block;
     font-size: 65px;
 }
+
+.top .mnbtn:hover:before{
+    color: rgb(167, 167, 167);
+}
+
+
 /*********** header ***********/
 
 
@@ -85,6 +91,7 @@ body{
 }
 
 .ftlg{
+    border-bottom: 1px solid #fff;
     font-family: 'Nunito', sans-serif;
     font-size: 35px;
     font-weight: bold;
@@ -151,10 +158,40 @@ body{
     margin: 42px 0 0 28px;
     width: 180px;
     height: 56px;
+    cursor: pointer;
+}
+
+.ftbtn:hover{
+    background-color: rgb(104, 104, 104);
+}
+
+.etctxt{
+    margin-top: 40px;
+    border-bottom: 1px solid #fff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.etc li{
+    margin: 28px 0;
+    font-size: 25px;
+    font-family: 'Cormorant', serif;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.etc a{
+    color: #fff;
+}
+
+.etc a:hover{
+    color: rgb(167, 167, 167);
 }
 
 .ver{
     margin-top: auto;
+    border-top: 1px solid #fff;
     padding: 12px 15px;
     font-size: 15px;
     font-family: 'Cormorant', serif;
@@ -164,19 +201,22 @@ body{
 
 /*********** menu ***********/
 .menu{
+    position: fixed;
     display: flex;
     flex-direction: column;
-    /* 임시 크기 - fixed할 때 다시 수정 */
+    top: 0;
     width: 100%;
-    height: 900px;
+    height: 0;
     background: url("../img/menu-bg.jpg");
     color: white;
+    overflow: hidden;
 }
 
 .mntop{
     display: flex;
     justify-content: space-between;
     padding: 30px 50px;
+    margin-bottom: 130px;
 }
 
 .cnbtn{
@@ -184,6 +224,10 @@ body{
     color: white;
     background-color: transparent;
     cursor: pointer;
+}
+
+.cnbtn:hover, .mntxt:hover{
+    color: rgb(167, 167, 167);
 }
 
 .mnex{
