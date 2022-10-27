@@ -100,11 +100,22 @@ body *{
 /* 배경 사진 */
 .bg1{
     background: url(../img/card-collection.png) no-repeat center 55%/90%;
+    transition: 0.5s;
 }
 
 .bg2{
     /* 임시 배경 */
     background: url(../img/card-collection.png) no-repeat center 55%/90%;
+    transition: 0.5s;
+}
+
+.bg1:hover{
+    background: url(../img/card-collection.png) no-repeat center 55%/97%;
+}
+
+.bg2:hover{
+    /* 임시 배경 */
+    background: url(../img/card-collection.png) no-repeat center 55%/97%;
 }
 
 /* 글자 셋팅 */
@@ -144,3 +155,52 @@ body *{
     margin-top: 6%;
 }
 /*********** 서브 페이지 ***********/
+
+
+/*********** credits ***********/
+.credits{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    /* 임시 크기 - fixed할 때 다시 수정 */
+    width: 40%;
+    height: 900px;
+    text-align: left;
+}
+
+.crtop{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(105, 105, 105, 0.671);
+}
+
+.crbtn2{
+    margin: 30px 40px;
+    border: 3px solid #000;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 45px;
+    line-height: 45px;
+    background-color: transparent;
+}
+
+.crtxt{
+    margin-right: 20px;
+    padding: 16px;
+    font-family: 'Cormorant', serif;
+    font-size: 70px;
+}
+
+.duty{
+    font-size: 50px;
+}
+
+.name{
+    font-size: 30px;
+}
+
+.sor{
+    margin-top: auto;
+}
+/*********** credits ***********/

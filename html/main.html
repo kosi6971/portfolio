@@ -9,27 +9,18 @@
     <script src="../jq/jq-ver/jquery-3.6.0.min.js"></script>
     <script>
         $(()=>{
-            // 체크 여부
-            let chk = 0;
             $(".chkbx").click(function(){
-                // input 체크 여부
-                const on = $(".chknn").is("checked");
+                let on = $(".chknn").is(":checked");
 
-                if(chk){
-                    $(this).css({backgroundColor:"black"});
-                    chk = 0;
-                }
-                else{
-                    $(".chkbx").css({backgroundColor:"black"});
-                    $(this).css({backgroundColor:"white"});
-                    chk++;
-                }
+                // 버튼이 false에서 true가 될 때, if가 작동
+                // true에서 false가 될 때는 작동이 되지 않으므로
+                // 기본 기능인 on/off기능만이 남아 꺼진다 
+                if(!$(this).prop("checked"))
+                // 클릭된 자신은 true, 나머지는 false
+                $(this).prop("checked",true).siblings().prop("checked",false);
 
-                console.log(idx);
-
-
+                console.log(on);
             });
-
         });
     </script>
     <title>main</title>
@@ -65,7 +56,7 @@
                 <!-- 스토리  -->
 
                 <!-- 크레딧 -->
-                <button class="crbtn">credits</button>
+                <button class="crbtn1">credits</button>
             </div>
             <!-- 본문 -->
             <div class="mtxt">
@@ -156,17 +147,17 @@
                     <input class="embox" type="text">
                 </div>
                 <!-- 국적 확인 -->
-                <div>
+                <div class="nat">
                     <h3 class="ex">Select languages</h3>
-                    <input class="chknn" type="checkbox" name="em" id="ko">
+                    <input class="chknn" type="checkbox" name="em" id="chk1">
                     <label class="chkbx" for="chk1"></label>
-                    <label class="nat" for="ko">KOREA</label>
-                    <input class="chknn" type="checkbox" name="em" id="fr">
-                    <label class="chkbx" for="chk1"></label>
-                    <label class="nat" for="fr">FRENCH</label>
-                    <input class="chknn" type="checkbox" name="em" id="en">
-                    <label class="chkbx" for="chk1"></label>
-                    <label class="nat" for="en">ENGLISH</label>
+                    <span class="coun">KOREA</span>
+                    <input class="chknn" type="checkbox" name="em" id="chk2">
+                    <label class="chkbx" for="chk2"></label>
+                    <span class="coun">FRENCH</span>
+                    <input class="chknn" type="checkbox" name="em" id="chk3">
+                    <label class="chkbx" for="chk3"></label>
+                    <span class="coun">ENGLISH</label>
                 </div>
                 <!-- 확인 버튼 -->
                 <button class="ftbtn">SUBMIT</button>
@@ -210,10 +201,12 @@
 
     <!-- credits부분 -->
     <div class="credits">
-        <!-- 버튼 -->
-        <button class="crbtn">X</button>
-        <!-- 제목 -->
-        <h4 class="crtxt">Credits</h4>
+        <div class="crtop">
+            <!-- 버튼 -->
+            <button class="crbtn2">X</button>
+            <!-- 제목 -->
+            <h4 class="crtxt">Credits</h4>
+        </div>
         <!-- 인물 간단 소개 -->
         <span class="duty">developer :</span>
         <p class="name">
@@ -235,22 +228,29 @@
     <!-- 버튼 메뉴 부분 -->
     <div id="menu">
         <div class="menu">
+            <div class="mntop">
+                <!-- 로고 -->
+                <a href="#">
+                    <img src="../img/kosi.png" alt="로고">
+                </a>
+                <!-- 취소 버튼 -->
+                <button class="cnbtn">X</button>
+            </div>
             <!-- 소개 -->
-            <a href="#">Introduction</a>
+            <a href="#" class="mntxt">Introduction</a>
             <!-- 서브 페이지1 이동 -->
             <h5 class="mnex">PART1</h5>
-            <a href="#">A promise Broken</a>
+            <a href="#" class="mntxt"><p>A promise Broken</p></a>
             <!-- 서브 페이지2 이동 -->
             <h5 class="mnex">PART2</h5>
-            <a href="#">
-                <p>
-                    Economic Opportunities for our<br>
-                    Avatars
-                </p>
+            <a href="#" class="mntxt">
+                <p>Economic Opportunities for our Avatars</p>
             </a>
             <!-- 버전 -->
-            <h5 class="mnver1">© kosi BNP Paribas 2022</h5>
-            <h5 class="mnver2">kosi Corporate Website</h5>
+            <div class="mnver">
+                <h5 class="mnver1">© kosi BNP Paribas 2022</h5>
+                <h5 class="mnver2">kosi Corporate Website</h5>
+            </div>
         </div>
     </div>
 </body>
