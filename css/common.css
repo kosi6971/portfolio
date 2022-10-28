@@ -1,6 +1,12 @@
 @charset "utf-8";
 /* 공통 모듈 CSS - common.css */
 
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cormorant:wght@300&family=Nunito&display=swap');
+/* font-family: 'Caveat', cursive;  글씨*/
+/* font-family: 'Cormorant', serif; 얇고 간단*/
+/* font-family: 'Nunito', sans-serif; 기본*/
+
 /* 전체 글자 크기 root 셋팅 */
 html{
     font-size: 10px;
@@ -11,6 +17,27 @@ html{
 body{
     background: url("../img/main-bg.jpg");
 }
+
+/*********** scrollber ***********/
+/* 스크롤바 디자인 클래스 */
+/* -webkit- 벤터사명(크롬, 사파리) 접두어
+(참고 : -ms-(ie), -o-(오페라), -moz-(파이어폭스) */
+body::-webkit-scrollbar{
+    /* 전체 스크롤바 크기 변경 */
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb{
+    /* 스크롤바 */
+    background-color: rgb(68, 68, 68);
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track{
+    /* 스크롤바 트랙 */
+    background-color: rgb(190, 190, 190);
+}
+/*********** scrollber ***********/
 
 
 /*********** header ***********/
@@ -155,7 +182,7 @@ body{
 }
 
 .ftbtn{
-    margin: 42px 0 0 28px;
+    margin: 42px 0 20px 28px;
     width: 180px;
     height: 56px;
     cursor: pointer;

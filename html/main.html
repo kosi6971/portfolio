@@ -7,51 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
     <script src="../jq/jq-ver/jquery-3.6.0.min.js"></script>
-    <script>
-        $(()=>{
-            // 메뉴창 뜨게 만들기
-            $(".mnbtn").click(()=>{
-                $(".menu").animate({
-                    height:"100%"
-                }, 500);
-            });
-
-            // 메뉴창 사라지게 만들기
-            $(".cnbtn").click(()=>{
-                $(".menu").animate({
-                    height:"0"
-                }, 500);
-            });
-
-            // credits창 뜨게 만들기
-            $(".crbtn1").click(()=>{
-                $(".credits").animate({
-                    width:"40%"
-                }, 500);
-            });
-
-            // credits창 사라지게 만들기
-            $(".crbtn2").click(()=>{
-                $(".credits").animate({
-                    width:"0"
-                }, 500);
-            });
-
-            // 체크 박스 체크 하나만 되게 만들기
-            $(".chkbx").click(function(){
-                let on = $(".chknn").is(":checked");
-
-                // 버튼이 false에서 true가 될 때, if가 작동
-                // true에서 false가 될 때는 작동이 되지 않으므로
-                // 기본 기능인 on/off기능만이 남아 꺼진다 
-                if(!$(this).prop("checked"))
-                // 클릭된 자신은 true, 나머지는 false
-                $(this).prop("checked",true).siblings().prop("checked",false);
-
-                console.log(on);
-            });
-        });
-    </script>
+    <script src="../jq/code/common.js"></script>
+    <script src="../jq/code/main.js"></script>
     <title>main</title>
 </head>
 
@@ -75,9 +32,8 @@
     <!-- 메인 영역 -->
     <main id="main">
         <div class="main ibx">
-            <!-- 시작 이벤트 -->
+            <!-- 시작 인사 -->
             <div class="cont">
-
                 <!-- 로고 -->
                 <a href="#" class="logo">
                     <img src="../img/kosi.png" alt="로고">
@@ -233,29 +189,31 @@
     </footer>
 
     <!-- credits부분 -->
-    <div class="credits">
-        <div class="crtop">
-            <!-- 버튼 -->
-            <button class="crbtn2">X</button>
-            <!-- 제목 -->
-            <h4 class="crtxt">Credits</h4>
+    <div id="credits">
+        <div class="credits">
+            <div class="crtop">
+                <!-- 버튼 -->
+                <button class="crbtn2">X</button>
+                <!-- 제목 -->
+                <h4 class="crtxt">Credits</h4>
+            </div>
+            <!-- 인물 간단 소개 -->
+            <span class="duty">developer :</span>
+            <p class="name">
+                kr.sil
+            </p>
+            <span class="duty">collaborators : </span>
+            <p class="name">
+                bbi_yak - logo production<br>
+                tombap8 - aid
+            </p>
+            <!-- 사이트 출처 -->
+            <blockquote class="sor">
+                sources :<br>
+                <a href="https://atelier.net/social-mobility/">https://atelier.net/social-mobility/</a><br>
+                <a href="https://www.w3schools.com/">https://www.w3schools.com/</a>
+            </blockquote>
         </div>
-        <!-- 인물 간단 소개 -->
-        <span class="duty">developer :</span>
-        <p class="name">
-            kr.sil
-        </p>
-        <span class="duty">collaborators : </span>
-        <p class="name">
-            bbi_yak - logo production<br>
-            tombap8 - aid
-        </p>
-        <!-- 사이트 출처 -->
-        <blockquote class="sor">
-            sources :<br>
-            <a href="https://atelier.net/social-mobility/">https://atelier.net/social-mobility/</a><br>
-            <a href="https://www.w3schools.com/">https://www.w3schools.com/</a>
-        </blockquote>
     </div>
 
     <!-- 버튼 메뉴 부분 -->
@@ -273,7 +231,7 @@
             <a href="main.html" class="mntxt">Introduction</a>
             <!-- 서브 페이지1 이동 -->
             <h5 class="mnex">PART1</h5>
-            <a href="#" class="mntxt"><p>A promise Broken</p></a>
+            <a href="sub1.html" class="mntxt"><p>A promise Broken</p></a>
             <!-- 서브 페이지2 이동 -->
             <h5 class="mnex">PART2</h5>
             <a href="#" class="mntxt">

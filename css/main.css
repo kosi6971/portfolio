@@ -1,12 +1,6 @@
 @charset "utf-8";
 /* main 페이지 CSS - main.css */
 
-/* font */
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cormorant:wght@300&family=Nunito&display=swap');
-/* font-family: 'Caveat', cursive;  글씨*/
-/* font-family: 'Cormorant', serif; 얇고 간단*/
-/* font-family: 'Nunito', sans-serif; 기본*/
-
 /* CSS 결합 */
 @import url(common.css);
 @import url(core.css);
@@ -17,7 +11,7 @@ body *{
     outline: 1px solid red;
 }
 
-/*********** 시작 이벤트 ***********/
+/*********** 시작 인사 ***********/
 .cont{
     display: flex;
     flex-direction: column;
@@ -43,7 +37,7 @@ body *{
 .crbtn1:hover{
     color: rgb(167, 167, 167);
 }
-/*********** 시작 이벤트 ***********/
+/*********** 시작 인사 ***********/
 
 
 /*********** 본문 ***********/
@@ -133,6 +127,7 @@ body *{
 
 .bg1:hover{
     background: url(../img/card-collection.png) no-repeat center 55%/97%;
+    transform: rotateX(10deg) rotateY(10deg);
 }
 
 .bg1:hover p, .bg1:hover .sub1 div{
@@ -243,7 +238,8 @@ body *{
 .duty{
     margin: 54px 10px 0 10px;
     border-bottom: 1px solid black;
-    font-family: 'Caveat', cursive;
+    font-family: 'Cormorant', serif;
+    font-weight: bold;
     font-size: 50px;
 }
 
