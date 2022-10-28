@@ -143,6 +143,7 @@ body *{
 .bg2:hover{
     /* 임시 배경 */
     background: url(../img/card-collection.png) no-repeat center 55%/97%;
+    transform: rotateX(10deg) rotateY(10deg);
 }
 
 .bg2:hover p, .bg2:hover .sub2 div{
