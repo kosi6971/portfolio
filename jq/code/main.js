@@ -3,7 +3,7 @@ $(()=>{
     $(".crbtn1").click(()=>{
         $(".credits").animate({
             width:"40%"
-        }, 500);
+        }, 400);
     });
 
     // credits창 사라지게 만들기

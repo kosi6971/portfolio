@@ -26,4 +26,31 @@ $(()=>{
 
         console.log(on);
     });
+
+    // header 변경
+    const top2 = $(".top"); // header 속박스
+    const top1 = $("#top"); // header 겉박스
+    let scTop; // 현재 위치값
+    let lastSC = 0; // 전 위치값
+
+    $(window).scroll(function(){
+        // 스크롤 위치값(this는 window)
+        scTop = $(this).scrollTop();
+        // scrollTop() 메서드 : 세로 스크롤 위치값을 return하는 메서드
+
+        console.log(scTop);
+
+        // 겉 박스 css 변경
+        if(scTop >= 400) top1.stop().animate({backgroundColor: "black"}, 200);
+        else top1.stop().animate({backgroundColor: "rgb(83, 83, 83, 0.562)"},200);
+        // stop 메서드 : animate가 반복되면 전에 있는 기록으로 인해 망가지는 것을 방지
+
+        // 스크롤 방향에 따라 클래스를 이용한 위치값 변경
+        if(scTop > lastSC) top2.addClass("up");
+        else top2.removeClass("up");
+
+        // 위치값 업데이트
+        lastSC = scTop;
+    });
+
 });
