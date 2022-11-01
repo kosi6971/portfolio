@@ -7,15 +7,32 @@
 @import url(reset.css);
 
 
-body *{
+/* body *{
     outline: 1px solid red;
-}
+} */
+
+
+/*********** 시작 이벤트 ***********/
+
+
+
+
+/*********** 시작 이벤트 ***********/
+
 
 /*********** 시작 인사 ***********/
 .cont{
     display: flex;
     flex-direction: column;
-    padding-top: 200px;
+    padding-top: 650px;
+}
+
+.evtxt{
+    margin-bottom: 650px;
+    font-size: 140px;
+    font-family: 'Nunito', sans-serif;
+    line-height: 140px;
+    letter-spacing: 3px;
 }
 
 .sto{

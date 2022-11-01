@@ -41,8 +41,24 @@ $(()=>{
         console.log(scTop);
 
         // 겉 박스 css 변경
-        if(scTop >= 400) top1.stop().animate({backgroundColor: "black"}, 200);
-        else top1.stop().animate({backgroundColor: "rgb(83, 83, 83, 0.562)"},200);
+        if(scTop <= 400) top1.stop().animate({
+            borderBottom:"0",
+            backgroundColor: "rgba(83, 83, 83, 0)"
+        }, 200);
+        else if(scTop >= 2300){
+            top1.stop().animate({
+                backgroundColor: "black",
+                color:"white"
+            }, 200);
+            $(".mnbtn").stop().animate({color:"white"}, 200);
+        }
+        else{
+            top1.stop().css({borderBottom:"1px solid black"}).animate({
+                color:"black",
+                backgroundColor: "rgba(83, 83, 83, 0.562)"
+            },200);
+            $(".mnbtn").stop().animate({color:"black"}, 200);
+        }
         // stop 메서드 : animate가 반복되면 전에 있는 기록으로 인해 망가지는 것을 방지
 
         // 스크롤 방향에 따라 클래스를 이용한 위치값 변경
