@@ -46,7 +46,6 @@ body::-webkit-scrollbar-track{
     width: 100%;
     background-color:rgba(83, 83, 83, 0);
     box-sizing: border-box;
-    z-index: 1;
 }
 
 .top{
@@ -242,7 +241,6 @@ body::-webkit-scrollbar-track{
     height: 0;
     background: url("../img/menu-bg.jpg");
     color: white;
-    z-index: 2;
     overflow: hidden;
 }
 

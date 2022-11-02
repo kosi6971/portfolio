@@ -11,7 +11,6 @@
     outline: 1px solid red;
 } */
 
-
 /*********** 시작 이벤트 ***********/
 
 
@@ -24,11 +23,12 @@
 .cont{
     display: flex;
     flex-direction: column;
-    padding-top: 650px;
+    padding-top: 585px;
 }
 
 .evtxt{
     margin-bottom: 650px;
+    padding: 70px;
     font-size: 140px;
     font-family: 'Nunito', sans-serif;
     line-height: 140px;
@@ -61,7 +61,7 @@
 /* 본문 전체 박스 */
 .mtxt{
     padding: 40px;
-    margin: 80px 0 50px;
+    margin: 900px 0 50px;
 }
 
 /* 본문 기본 글씨 */
