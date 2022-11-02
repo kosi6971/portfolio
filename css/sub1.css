@@ -10,7 +10,7 @@ body *{
     outline: 1px solid red;
 }
 
-/*********** sub1 ***********/
+/*********** card house ***********/
 /* 카드 파괴 */
 .card_house{
     /* 가운데 정렬 */
@@ -83,5 +83,20 @@ body *{
 .card_house>div:nth-child(12){
     transform: rotateY(90deg) rotateX(40deg) translateZ(316px) translateY(-180px) translateX(125px);
 }
+/*********** card house ***********/
 
-/*********** sub1 ***********/
+
+/*********** 본문1 ***********/
+/*********** 본문1 ***********/
+
+
+/*********** wall  ***********/
+.wall{
+    position: relative;
+    display: flex;
+}
+
+.wall>img{
+    width: 400px;
+}
+/*********** wall ***********/
