@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* main 페이지 애니 CSS - main_ani.css */
+
+/* #top 애니메이션 */
+#top{
+    opacity: 0;
+    animation: topdown 2s ease-in-out forwards;
+}
+
+@keyframes topdown {
+    to{
+        opacity: 1;
+    }
+}
+
+/* main 그림자 애니메이션 */
+#main::after{
+    top: -1200px;
+    animation: maindown 1.8s ease-in-out forwards;
+}
+
+@keyframes maindown {
+    to{
+        top: 0;
+    }
+}
+
+/* 시작 이벤트 애니메이션 */
+.event{
+    top: -455px;
+    opacity: 0;
+    animation: evtdown 1.8s ease-in-out forwards;
+}
+
+@keyframes evtdown {
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+/* 주제 애니메이션  */
+.evtxt{
+    opacity: 0;
+    animation: txtdown 2.5s ease-out forwards;
+}
+
+@keyframes txtdown {
+    to{
+        opacity: 1;
+    }
+}

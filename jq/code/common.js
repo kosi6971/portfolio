@@ -30,6 +30,7 @@ $(()=>{
     // header 변경
     const top2 = $(".top"); // header 속박스
     const top1 = $("#top"); // header 겉박스
+    const mnbtn = $(".mnbtn");
     let scTop; // 현재 위치값
     let lastSC = 0; // 전 위치값
 
@@ -38,26 +39,28 @@ $(()=>{
         scTop = $(this).scrollTop();
         // scrollTop() 메서드 : 세로 스크롤 위치값을 return하는 메서드
 
-        console.log(scTop);
-
         // 겉 박스 css 변경
-        if(scTop <= 400) top1.stop().animate({
-            borderBottom:"0",
-            backgroundColor: "rgba(83, 83, 83, 0)"
-        }, 200);
-        else if(scTop >= 2300){
+        if(scTop <= 1300){
+            top1.stop().animate({
+                borderBottom:"0",
+                backgroundColor: "rgba(83, 83, 83, 0)",
+                color:"white"
+            }, 200);
+            mnbtn.stop().animate({color:"white"}, 200);
+        }
+        else if(scTop >= 6800){
             top1.stop().animate({
                 backgroundColor: "black",
                 color:"white"
             }, 200);
-            $(".mnbtn").stop().animate({color:"white"}, 200);
+            mnbtn.stop().animate({color:"white"}, 200);
         }
         else{
             top1.stop().css({borderBottom:"1px solid black"}).animate({
                 color:"black",
                 backgroundColor: "rgba(83, 83, 83, 0.562)"
             },200);
-            $(".mnbtn").stop().animate({color:"black"}, 200);
+            mnbtn.stop().animate({color:"black"}, 200);
         }
         // stop 메서드 : animate가 반복되면 전에 있는 기록으로 인해 망가지는 것을 방지
 
