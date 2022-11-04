@@ -24,40 +24,55 @@ $(()=>{
     const hole = $(".hole");
     // 사다리 이미지
     const ladder = $(".ladder");
-    // 시작 이벤트 이미지
-    const img = $(".event img");
     // 스크롤 위치 이동값
     let sctop;
+    // 구멍 이벤트 좌표
+    // 이미지와 credits버튼이 만나는 좌표
+    let hlstart = $(".crbtn1").offset().top;
+    hlstart -= winH*1.52;
+    // 더 빠른 시작을 위해 시작 좌표를 올려준 것이다.
+    // 시작 위치만 달라지고 길이는 똑같기 때문에 위치상의 문제는 없다
+    // credits버튼 좌표 + 시작 텍스트 margin-top값 = 위치 끝
+    let hlend = $(".crbtn1").offset().top+2700;
+    hlend -= winH*1.52;
+    // 더 빠른 시작을 위해 시작 좌표를 올려준 것이다.
+    // 시작 위치만 달라지고 길이는 똑같기 때문에 위치상의 문제는 없다
 
     console.log("전체 길이 : ", fullpage);
+
+    
 
     $(window).scroll(function(){
         // 스크롤 위치 이동값 업데이트
         sctop = $(this).scrollTop();
-        console.log("스크롤 위치 : ", sctop);
+        // console.log("스크롤 위치 : ", sctop);
 
         // 사람 이미지 위치값
         let flgPosition = (winH*sctop)/fullpage;
         // 스크롤 이동 가능 길이 : 보이는 화면 길이 = 스크롤 위치 이동값 : 이미지 이동값
         // 이미지 이동값 = 보이는 화면 길이 * 스크롤 위치 이동값 / 스크롤 이동 가능 길이
         // 사다리 이미지 위치값
-        let ladPosition = (winH*sctop)/fullpage;
+        let ladPosition;
 
-        console.log(flgPosition);
+        // 구멍 이미지 위치값
+        let hlPosition = (650*(sctop-hlstart)/2700);
+        // 움직일 때 실제 화면 넓이 : 움직여지는 화면 넓이 = 스크롤이 움직여지는 길이 : 이미지가 움직이는 길이
+        // 이미지가 움직이는 길이 = (움직여지는 화면 넓이*스크롤이 움직여지는 길이)/움직일 때 실제 화면 넓이
 
         // 사람 이동
         falling.css({top:flgPosition+280+"px"});
 
-        // 사다리
-        ladPosition = -ladPosition;
+        // 사다리 이동
+        ladPosition = -flgPosition; 
         ladder.css({top:ladPosition+"px"});
 
-        if(flgPosition >= 190){
-            hole.animate({top:"579px"}, 1000);
+        // 구멍 이동
+        if(sctop >= hlstart && sctop <= hlend){
+            hole.css({bottom:hlPosition+"px"});
         }
-        else if(flgPosition >= 500){
-            console.log("!!!!!");
-            img.stop().animate({display:"none"},500);
+        else{
+            // img width down
+
         }
 
     });
