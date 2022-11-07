@@ -10,12 +10,13 @@ body *{
     outline: 1px solid red;
 }
 
+
 /*********** card house ***********/
 /* 카드 파괴 */
 .card_house{
     /* 가운데 정렬 */
     position: absolute;
-    top: 350px;
+    top: 70vh;
     left:  calc(50% - 150px);
     /* 카드 크기 */
     width: 233px;
@@ -84,6 +85,13 @@ body *{
     transform: rotateY(90deg) rotateX(40deg) translateZ(316px) translateY(-180px) translateX(125px);
 }
 /*********** card house ***********/
+
+
+/*********** 인트로 텍스트 ***********/
+/* .inttxt{
+
+} */
+/*********** 인트로 텍스트 ***********/
 
 
 /*********** 본문1 ***********/

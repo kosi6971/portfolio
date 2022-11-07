@@ -80,20 +80,23 @@ $(()=>{
         }
         // 현재 범위를 정하지 않고 스크롤이 내려갈 때 계속 걸린다
         // 이것을 고치시오
-        else if(sctop >= hlstart2 && sctop <= 4500){
+        else if(sctop >= hlstart2 && sctop < 4200){
             // 스크롤 업다운 여부를 확인하고 이미지 크기 조절
-            if(scdown > sctop && imgwd <= 100) {
+            if(scdown > sctop && imgwd < 100) {
                 imgwd+=5;
-                console.log("imgwd",imgwd);
             }
-            else if(scdown < sctop && imgwd >= 0) {
+            else if(scdown < sctop && imgwd > 0) {
                 imgwd-=5;
-                console.log("imgwd",imgwd);
             }
-            img.css({width:imgwd+"%"});
         }
-        console.log("sctop",sctop);
-        console.log("scdown",scdown);
+        else if(sctop >= 4200){
+            imgwd=0;
+        }
+        else{
+            imgwd=100;
+        }
+        img.css({width:imgwd+"%"});
+
         // 변수 업데이트
         scdown = sctop;
     });
