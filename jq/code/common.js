@@ -58,7 +58,7 @@ $(()=>{
         else{
             top1.stop().css({borderBottom:"1px solid black"}).animate({
                 color:"black",
-                backgroundColor: "rgba(83, 83, 83, 0.562)"
+                backgroundColor: "rgba(105, 105, 105, 0.5)"
             },200);
             mnbtn.stop().animate({color:"black"}, 200);
         }
