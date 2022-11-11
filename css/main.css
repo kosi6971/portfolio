@@ -105,6 +105,7 @@
     text-decoration: underline;
     background-color: transparent;
     cursor: pointer;
+    transition: .5s;
 }
 
 .crbtn1:hover{
@@ -297,6 +298,7 @@
     line-height: 45px;
     background-color: transparent;
     cursor: pointer;
+    transition: .3s;
 }
 
 .crbtn2:hover{
@@ -337,6 +339,7 @@
 
 .sor a{
     color: #000;
+    transition: .5s;
 }
 
 .sor a:hover{
