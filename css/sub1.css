@@ -10,14 +10,43 @@ body *{
     outline: 1px solid red;
 }
 
+.sub1{
+    overflow: hidden;
+}
+
+
+/*********** 인트로 텍스트 ***********/
+.inttxt{
+    position: fixed;
+    top: 30vh;
+    left: calc(50% - 555px);
+    z-index: 1;
+}
+
+.inttxt span{
+    display: block;
+    margin-bottom: 40px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.inttxt h2{
+    line-height: 150px;
+    font-family: 'Cormorant', serif;
+    font-size: 220px;
+}
+
+/*********** 인트로 텍스트 ***********/
+
 
 /*********** card house ***********/
 /* 카드 파괴 */
 .card_house{
     /* 가운데 정렬 */
-    position: absolute;
-    top: 70vh;
-    left:  calc(50% - 150px);
+    position: fixed ;
+    top: 75vh;
+    left: calc(50% - 150px);
     /* 카드 크기 */
     width: 233px;
     height: 375px;
@@ -87,14 +116,12 @@ body *{
 /*********** card house ***********/
 
 
-/*********** 인트로 텍스트 ***********/
-/* .inttxt{
-
-} */
-/*********** 인트로 텍스트 ***********/
-
-
 /*********** 본문1 ***********/
+.mntxt1{
+    /* 임시 높이값 */
+    margin-top: 258vh;
+}
+
 /*********** 본문1 ***********/
 
 

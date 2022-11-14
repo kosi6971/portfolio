@@ -194,34 +194,25 @@
 }
 
 /* 배경 사진 */
-.bg1{
+.bg1, .bg2{
     background: url(../img/card-collection.png) no-repeat center 55%/90%;
     transition: 0.5s;
+}
+
+.bg1:hover, .bg2:hover{
+    background: url(../img/card-collection.png) no-repeat center 55%/97%;
+}
+
+.bg1:hover p, .bg1:hover .sub1 div, .bg2:hover p, .bg2:hover .sub2 div{
+    color: rgb(167, 167, 167);
 }
 
 .bg1:hover{
-    background: url(../img/card-collection.png) no-repeat center 55%/97%;
     transform: rotateX(10deg) rotateY(10deg);
 }
 
-.bg1:hover p, .bg1:hover .sub1 div{
-    color: rgb(167, 167, 167);
-}
-
-.bg2{
-    /* 임시 배경 */
-    background: url(../img/card-collection.png) no-repeat center 55%/90%;
-    transition: 0.5s;
-}
-
 .bg2:hover{
-    /* 임시 배경 */
-    background: url(../img/card-collection.png) no-repeat center 55%/97%;
     transform: rotateX(-10deg) rotateY(10deg);
-}
-
-.bg2:hover p, .bg2:hover .sub2 div{
-    color: rgb(167, 167, 167);
 }
 
 /* 글자 셋팅 */
