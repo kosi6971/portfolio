@@ -15,31 +15,6 @@ body *{
 }
 
 
-/*********** 인트로 텍스트 ***********/
-.inttxt{
-    position: fixed;
-    top: 30vh;
-    left: calc(50% - 555px);
-    z-index: 1;
-}
-
-.inttxt span{
-    display: block;
-    margin-bottom: 40px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.inttxt h2{
-    line-height: 150px;
-    font-family: 'Cormorant', serif;
-    font-size: 220px;
-}
-
-/*********** 인트로 텍스트 ***********/
-
-
 /*********** card house ***********/
 /* 카드 파괴 */
 .card_house{
@@ -114,6 +89,30 @@ body *{
     transform: rotateY(90deg) rotateX(40deg) translateZ(316px) translateY(-180px) translateX(125px);
 }
 /*********** card house ***********/
+
+
+/*********** 인트로 텍스트 ***********/
+.inttxt{
+    position: fixed;
+    top: 30vh;
+    left: calc(50% - 555px);
+}
+
+.inttxt span{
+    display: block;
+    margin-bottom: 40px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.inttxt h2{
+    line-height: 150px;
+    font-family: 'Cormorant', serif;
+    font-size: 220px;
+}
+
+/*********** 인트로 텍스트 ***********/
 
 
 /*********** 본문1 ***********/

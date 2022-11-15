@@ -1,37 +1,41 @@
 /* sub1 페이지 js - sub1.js */
 
 $(()=>{
-    // 시작이벤트 글자
-
-    // 스크롤/////////
-
+    // 글자 변수
+    const evttxt = $(".inttxt");
+    // 카드집합체 변수
     const card = $(".card_house");
-
-
-    // 카드집 파괴
-    // 카드파괴 - 실제 스크롤 높이
-    const cardfull = $(".mntxt1").offset().top;
+    
     // 카드파괴 - 원하는 공간의 높이
-    const cardH = $(window).height();
+    const winH = $(window).height();
+    // 시작 이벤트 넓이 - 실제 스크롤 높이
+    const evtfull = $(".mntxt1").offset().top-winH;
+    
     // 스크롤 위치 이동값
     let sctop;
     
-    console.log(cardfull);
+    console.log(evtfull);
     
     $(window).scroll(function(){
         sctop = $(this).scrollTop();
 
-        console.log(cardH);
+        console.log(winH);
         console.log(sctop);
-        console.log(cardfull);
+        console.log(evtfull);
 
-        let cardposition = cardH*(sctop-cardH*1.935)/cardfull;
-        // 스크롤 이동 가능 길이 : 보이는 화면 길이 = 스크롤 위치 이동값 : 이미지 이동값
-        // 이미지 이동값 = 보이는 화면 길이 * 스크롤 위치 이동값 / 스크롤 이동 가능 길이
 
-        // console.log(cardposition);
-        if(sctop >= 0 && sctop <= cardH)
-        card.css({top:-cardposition+"px"});
+        let cardposition = winH*(sctop-winH*1.185)/evtfull;
+        
+        // 시작 이벤트 카드 임팩트 - 중심점 이동
+        if(sctop >= 0 && sctop <= evtfull){
+            card.css({top:-cardposition+"px"});
+        }
+    
+        let txtposition = winH*(sctop-winH*1.325)/evtfull;
 
+        // 시작 이벤트 글자 임팩트 - 중심점 이동
+        if(sctop >= evtfull/2 && sctop <= evtfull){
+            evttxt.css({top:-txtposition+"px"});
+        }
     });
 });
