@@ -13,15 +13,21 @@ $(()=>{
     
     // 스크롤 위치 이동값
     let sctop;
+
+    // 전 스크롤 위치 이동값
+    let scdown = 0;
+
+    // 투명도 변수
+    let opc = 100;
     
     console.log(evtfull);
     
     $(window).scroll(function(){
         sctop = $(this).scrollTop();
 
-        console.log(winH);
-        console.log(sctop);
-        console.log(evtfull);
+        // console.log(winH);
+        // console.log(sctop);
+        // console.log(evtfull);
 
 
         let cardposition = winH*(sctop-winH*1.185)/evtfull;
@@ -31,11 +37,30 @@ $(()=>{
             card.css({top:-cardposition+"px"});
         }
     
-        let txtposition = winH*(sctop-winH*1.325)/evtfull;
+        let txtposition = winH*(sctop-winH*1.2956)/evtfull;
 
         // 시작 이벤트 글자 임팩트 - 중심점 이동
         if(sctop >= evtfull/2 && sctop <= evtfull){
             evttxt.css({top:-txtposition+"px"});
+
+            // 투명도 조절
+            if(scdown > sctop && opc < 100){ // 스크롤이 올라갈 경우
+                opc++;
+            }
+            else if(scdown < sctop && opc > 0){ // 스크롤이 내려갈 경우
+                opc--;
+            }
         }
+        // 투명도 조절 - 초기화
+        else if(sctop <= evtfull/2){
+            opc = 100;
+        }
+        else{
+            opc = 0;
+        }
+        
+        evttxt.css({opacity:opc+"%"});
+
+        scdown = sctop;
     });
 });

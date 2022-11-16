@@ -29,6 +29,7 @@ body *{
     transform-style: preserve-3d;
     /* 입체를 잘보이게 하기 위해 약간 회전 */
     transform: rotateX(-27deg) rotateY(-45deg);
+    transition: .1s;
 }
 
 .card_house div{
@@ -96,6 +97,7 @@ body *{
     position: fixed;
     top: 30vh;
     left: calc(50% - 555px);
+    transition: .1s;
 }
 
 .inttxt span{
