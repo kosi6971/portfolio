@@ -151,7 +151,7 @@ body::-webkit-scrollbar-track{
 }
 
 .embox:hover{
-    cursor: url("../img/mousepoint.png"), 16px;
+    cursor: url("../img/mousepoint.png"), auto;
 }
 
 .chknn{
