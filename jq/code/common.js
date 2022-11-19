@@ -27,49 +27,28 @@ $(()=>{
         console.log(on);
     });
 
-    // header 변경
+    
+    /////////////////////////// header 변경 변수 ///////////////////////////
     const top2 = $(".top"); // header 속박스
-    const top1 = $("#top"); // header 겉박스
-    const mnbtn = $(".mnbtn div");
     let scTop; // 현재 위치값
     let lastSC = 0; // 전 위치값
+    /////////////////////////// header 변경 변수 ///////////////////////////
+
 
     $(window).scroll(function(){
-        // 스크롤 위치값(this는 window)
-        scTop = $(this).scrollTop();
+        scTop = $(this).scrollTop(); // 스크롤 위치값(this는 window)
         // scrollTop() 메서드 : 세로 스크롤 위치값을 return하는 메서드
 
-        // 겉 박스 css 변경
-        if(scTop <= 1300){
-            top1.stop().animate({
-                borderBottom:"0",
-                backgroundColor: "rgba(83, 83, 83, 0)",
-                color:"white"
-            }, 200);
-            mnbtn.stop().animate({backgroundColor:"white"}, 200);
-        }
-        else if(scTop >= 6800){
-            top1.stop().animate({
-                backgroundColor: "black",
-                color:"white"
-            }, 200);
-            mnbtn.stop().animate({backgroundColor:"white"}, 200);
-        }
-        else{
-            top1.stop().css({borderBottom:"1px solid black"}).animate({
-                color:"black",
-                backgroundColor: "rgba(105, 105, 105, 0.5)"
-            },200);
-            mnbtn.stop().animate({backgroundColor:"black"}, 200);
-        }
-        // stop 메서드 : animate가 반복되면 전에 있는 기록으로 인해 망가지는 것을 방지
-
+        
+        /////////////////////////// header 변경 ///////////////////////////
         // 스크롤 방향에 따라 클래스를 이용한 위치값 변경
         if(scTop > lastSC) top2.addClass("up");
         else top2.removeClass("up");
 
         // 위치값 업데이트
         lastSC = scTop;
+        /////////////////////////// header 변경 ///////////////////////////
+
     });
 
 });
