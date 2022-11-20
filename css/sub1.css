@@ -6,6 +6,8 @@
 @import url(core.css);
 @import url(reset.css);
 
+
+/*********** 페이지 공통 설정 ***********/
 body *{
     outline: 1px solid red;
 }
@@ -13,6 +15,39 @@ body *{
 .sub1{
     overflow: hidden;
 }
+
+.mn span{
+    display: block;
+    font-family: 'Cormorant', serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.mn h2{
+    font-family: 'Caveat', cursive; 
+    font-size: 140px;
+    line-height: 130px;
+    margin-bottom: 150px;
+}
+
+.mn p:first-of-type, .maint{
+    font-family: 'Caveat', cursive;
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+
+.mn p+p{
+    margin: 0 auto;
+    text-align: left;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+    padding-bottom: 30px;
+}
+
+/*********** 페이지 공통 설정 ***********/
+
 
 
 /*********** card house ***********/
@@ -118,20 +153,25 @@ body *{
 
 
 /*********** 본문1 ***********/
-.mntxt1{
-    /* 임시 높이값 */
+.txt1{
     margin-top: 258vh;
 }
+
+.txt1 p+p{
+    max-width: 820px;
+}
+
 
 /*********** 본문1 ***********/
 
 
 /*********** 벽을 타는 사람  ***********/
 .wall {
-    position: relative;
+    position: fixed;
     display: flex;
+    top: 46%;
+    left: -4.5%;
     width: 100%;
-    margin-left: -6%;
 }
 
 .wall>img{
@@ -149,6 +189,9 @@ body *{
 
 
 /*********** 본문2 ***********/
+.txt2{
+    margin-top: 258vh;
+}
 /*********** 본문2 ***********/
 
 
