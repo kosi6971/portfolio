@@ -16,6 +16,10 @@ body *{
     overflow: hidden;
 }
 
+.mn{
+    position: relative;
+}
+
 .mn span{
     display: block;
     font-family: 'Cormorant', serif;
@@ -28,13 +32,17 @@ body *{
     font-family: 'Caveat', cursive; 
     font-size: 140px;
     line-height: 130px;
-    margin-bottom: 150px;
+    margin-bottom: 280px;
 }
 
-.mn p:first-of-type, .maint{
+.mn p:first-of-type, .mn .maint{
     font-family: 'Caveat', cursive;
     font-size: 50px;
-    margin-bottom: 60px;
+    line-height: 45.2px;
+}
+
+.mn p:nth-of-type(2){
+    padding-top: 145px;
 }
 
 .mn p+p{
@@ -157,6 +165,12 @@ body *{
     margin-top: 258vh;
 }
 
+.txt1 .maint{
+    position: absolute;
+    top: 47.2%;
+    left: 48%;
+}
+
 .txt1 p+p{
     max-width: 820px;
 }
@@ -169,22 +183,31 @@ body *{
 .wall {
     position: fixed;
     display: flex;
-    top: 46%;
-    left: -4.5%;
+    top: 93%;
+    left: 3.5%;
     width: 100%;
 }
 
-.wall>img{
+.wall>span{
     margin-left: -4%;
     width: 28%;
 }
 
-.wall img:last-child {
-    position: absolute;
-    left: 55.9%;
-    top: 3%;
-    width: 5%;
+.wall img{
+    width: 100%;
 }
+
+.wall span:nth-child(3)::before{
+    position: absolute;
+    display: block;
+    content: '';
+    width: 70px;
+    height: 304px;
+    top: 2.9%;
+    right: 53.3%;
+    background: url(../img/climber-shadow.png) no-repeat center/cover;
+}
+
 /*********** 벽을 타는 사람 ***********/
 
 
