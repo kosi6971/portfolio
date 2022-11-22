@@ -24,7 +24,7 @@ $(()=>{
     const hole = $(".hole"); // 구멍 이미지
     const ladder = $(".ladder"); // 사다리 이미지
     let sctop; // 스크롤 위치 이동값
-
+    
     // 구멍 이벤트 좌표
     const hlstart = $(".crbtn1").offset().top-winH*2.3; // 이미지와 credits버튼이 만나는 좌표
     // 더 빠른 시작을 위해 시작 좌표를 올려준 것이다.
@@ -40,13 +40,15 @@ $(()=>{
     /////////////////////////// 시작 이벤트 변수 ///////////////////////////
 
     /////////////////////////// header 변경 변수 ///////////////////////////
-    const top1 = $("#top"); // header 겉박스
+    const top = $("#top"); // header 겉박스
     const mnbtn = $(".mnbtn div");
+    // 색이 변하는 위치
+    const ch1 = $(".evtxt").offset().top+$(".evtxt").height();
+    const ch2 = $("#sub1").offset().top - top.height(); 
     /////////////////////////// header 변경 변수 ///////////////////////////
 
     console.log("전체 길이 : ", fullpage);
     
-
     $(window).scroll(function(){
         // 스크롤 위치 이동값 업데이트
         sctop = $(this).scrollTop();
@@ -101,23 +103,23 @@ $(()=>{
 
         /////////////////////////// header 변경 ///////////////////////////
         // 겉 박스 css 변경
-        if(sctop<= 1300){
-            top1.stop().animate({
+        if(sctop<= ch1){
+            top.stop().animate({
                 borderBottom:"0",
                 backgroundColor: "rgba(83, 83, 83, 0)",
                 color:"white"
             }, 200);
             mnbtn.stop().animate({backgroundColor:"white"}, 200);
         }
-        else if(sctop>= 6800){
-            top1.stop().animate({
+        else if(sctop>= ch2){
+            top.stop().animate({
                 backgroundColor: "black",
                 color:"white"
             }, 200);
             mnbtn.stop().animate({backgroundColor:"white"}, 200);
         }
         else{
-            top1.stop().css({borderBottom:"1px solid black"}).animate({
+            top.stop().css({borderBottom:"1px solid black"}).animate({
                 color:"black",
                 backgroundColor: "rgba(105, 105, 105, 0.5)"
             },200);
