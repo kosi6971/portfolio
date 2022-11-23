@@ -27,7 +27,7 @@
 
 11. credits창 배경 변경 - 완료
 
-12. common js 고치기
+12. common js 고치기 - 완료
 
 13. 버튼 모양 div로 선 만들기 - 완료
 
