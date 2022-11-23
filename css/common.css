@@ -7,9 +7,7 @@
 /* font-family: 'Cormorant', serif; 얇고 간단*/
 /* font-family: 'Nunito', sans-serif; 기본*/
 
-/* 전체 글자 크기 root 셋팅 */
 html{
-    font-size: 10px;
     text-align: center;
     user-select: none;
 }
@@ -71,7 +69,7 @@ body::-webkit-scrollbar-track{
     width: 230px;
     margin-top: 7.6px;
     padding: 0 15px;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-family: 'Caveat', cursive;
 }
 
@@ -131,13 +129,13 @@ body::-webkit-scrollbar-track{
 .ftlg{
     border-bottom: 1px solid #fff;
     font-family: 'Nunito', sans-serif;
-    font-size: 35px;
+    font-size: 3.5rem;
     font-weight: bold;
 }
 
 .ex{
     padding: 38px 0 8px;
-    font-size: 25px;
+    font-size: 2.5rem;
 }
 
 .embox{
@@ -145,7 +143,7 @@ body::-webkit-scrollbar-track{
     padding: 0 23px;
     width: 61%;
     height: 50px;
-    font-size: 25px;
+    font-size: 2.5rem;
     color: white;
     background-color: rgb(124, 124, 124);
 }
@@ -191,7 +189,7 @@ body::-webkit-scrollbar-track{
 }
 
 .coun{
-    font-size: 20px;
+    font-size: 2rem;
     font-family: 'Cormorant', serif;
     font-weight: bold;
 }
@@ -212,13 +210,13 @@ body::-webkit-scrollbar-track{
     margin-top: 40px;
     border-bottom: 1px solid #fff;
     font-family: 'Nunito', sans-serif;
-    font-size: 35px;
+    font-size: 3.5rem;
     font-weight: bold;
 }
 
 .etc li{
     margin: 28px 0;
-    font-size: 25px;
+    font-size: 2.5rem;
     font-family: 'Cormorant', serif;
     font-weight: bold;
     text-decoration: underline;
@@ -237,7 +235,7 @@ body::-webkit-scrollbar-track{
     margin-top: auto;
     border-top: 1px solid #fff;
     padding: 12px 15px;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-family: 'Cormorant', serif;
 }
 /*********** footer ***********/
@@ -265,7 +263,7 @@ body::-webkit-scrollbar-track{
 }
 
 .cnbtn{
-    font-size: 30px;
+    font-size: 3rem;
     color: white;
     background-color: transparent;
     cursor: pointer;
@@ -281,13 +279,13 @@ body::-webkit-scrollbar-track{
     padding-top: 20px;
     width: 80%;
     border-top: 1px solid white;
-    font-size: 25px;
+    font-size: 2.5rem;
 }
 
 .mntxt{
     padding: 35px 0 70px;
     font-family: 'Caveat', cursive;
-    font-size: 40px;
+    font-size: 4rem;
     color: white;
     transition: .5s;
 }
@@ -300,7 +298,7 @@ body::-webkit-scrollbar-track{
 
 .mnver1, .mnver2{
     padding: 20px 30px;
-    font-size: 13px;
+    font-size: 1.3rem;
     
 }
 /*********** menu ***********/
