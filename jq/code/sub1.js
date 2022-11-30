@@ -37,15 +37,15 @@ $(()=>{
             "rotateY(137deg) rotateX(33deg) translateZ(375px) translateY(-183px) translateX(-60px)"
         ],
         [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "rotateY(-131deg) rotateX(32deg) translateZ(395px) translateY(-257px) translateX(-4px)",
+            "rotateY(8deg) rotateX(340deg) translateZ(327px) translateY(-269px) translateX(183px)",
+            "rotateY(311deg) rotateX(37deg) translateZ(265px) translateY(104px) translateX(82px)",
+            "rotateY(115deg) rotateX(327deg) translateZ(227px) translateY(-377px) translateX(-437px)",
+            "rotateY(135deg) rotateX(312deg) translateZ(166px) translateY(-229px) translateX(23px)",
+            "rotateY(241deg) rotateX(345deg) translateZ(223px) translateY(-152px) translateX(-421px)",
+            "rotateY(212deg) rotateX(307deg) translateZ(287px) translateY(-325px) translateX(-102px)",
+            "rotateY(-101deg) rotateX(321deg) translateZ(268px) translateY(-222px) translateX(122px)",
+            "rotateY(-105deg) rotateX(372deg) translateZ(279px) translateY(160px) translateX(-101px)",
+            "rotateY(-120deg) rotateX(13deg) translateZ(468px) translateY(-116px) translateX(-94px)",
             "rotateY(-38deg) rotateX(38deg) translateZ(458px) translateY(-180px) translateX(9px)",
             "rotateY(71deg) rotateX(44deg) translateZ(510px) translateY(-130px) translateX(-94px)",
             "rotateY(153deg) rotateX(33deg) translateZ(403px) translateY(-246px) translateX(-46px)"
@@ -263,7 +263,7 @@ $(()=>{
                 num++;
             }
         }
-        else if(sctop > 0 && sctop <= evtfull/15+2){
+        else if(sctop > 0 && sctop <= evtfull/15+1){
             let num = 0;
             for (const i of explosion[1]) {
                 card.children(`div:eq(${num})`).stop().css({
@@ -273,7 +273,7 @@ $(()=>{
                 num++;
             }
         }
-        else if(sctop > evtfull/15*2 && sctop <= evtfull/15*3+2){
+        else if(sctop > evtfull/15*2 && sctop <= evtfull/15*3+1){
             let num = 0;
             for (const i of explosion[2]) {
                 card.children(`div:eq(${num})`).stop().css({
@@ -282,18 +282,18 @@ $(()=>{
                 num++;
             }
         }
-        // else if(sctop > evtfull/15*2 && sctop <= evtfull/15*3+2){}
-        // else if(sctop > evtfull/15*3 && sctop <= evtfull/15*4+2){}
-        // else if(sctop > evtfull/15*4 && sctop <= evtfull/15*5+2){}
-        // else if(sctop > evtfull/15*5 && sctop <= evtfull/15*6+2){}
-        // else if(sctop > evtfull/15*6 && sctop <= evtfull/15*7+2){}
-        // else if(sctop > evtfull/15*7 && sctop <= evtfull/15*8+2){}
-        // else if(sctop > evtfull/15*8 && sctop <= evtfull/15*9+2){}
-        // else if(sctop > evtfull/15*9 && sctop <= evtfull/15*10+2){}
-        // else if(sctop > evtfull/15*10 && sctop <= evtfull/15*11+2){}
-        // else if(sctop > evtfull/15*11 && sctop <= evtfull/15*12+2){}
-        // else if(sctop > evtfull/15*12 && sctop <= evtfull/15*13+2){}
-        // else if(sctop > evtfull/15*13 && sctop <= evtfull/15*14+2){}
+        // else if(sctop > evtfull/15*2 && sctop <= evtfull/15*3+1{}
+        // else if(sctop > evtfull/15*3 && sctop <= evtfull/15*4+1{}
+        // else if(sctop > evtfull/15*4 && sctop <= evtfull/15*5+1{}
+        // else if(sctop > evtfull/15*5 && sctop <= evtfull/15*6+1{}
+        // else if(sctop > evtfull/15*6 && sctop <= evtfull/15*7+1{}
+        // else if(sctop > evtfull/15*7 && sctop <= evtfull/15*8+1{}
+        // else if(sctop > evtfull/15*8 && sctop <= evtfull/15*9+1{}
+        // else if(sctop > evtfull/15*9 && sctop <= evtfull/15*10+1){}
+        // else if(sctop > evtfull/15*10 && sctop <= evtfull/15*11+1){}
+        // else if(sctop > evtfull/15*11 && sctop <= evtfull/15*12+1){}
+        // else if(sctop > evtfull/15*12 && sctop <= evtfull/15*13+1){}
+        // else if(sctop > evtfull/15*13 && sctop <= evtfull/15*14+1){}
 
 
         /////////////////////////// 카드 파괴 ///////////////////////////
