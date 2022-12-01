@@ -51,17 +51,46 @@ $(()=>{
             "rotateY(153deg) rotateX(33deg) translateZ(403px) translateY(-246px) translateX(-46px)"
         ],
         [
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
+            "rotateY(23deg) rotateX(336deg) translateZ(410px) translateY(-253px) translateX(137px)",
+            "rotateY(304deg) rotateX(44deg) translateZ(238px) translateY(236px) translateX(43px)",
+            "rotateY(107deg) rotateX(314deg) translateZ(248px) translateY(-506px) translateX(-433px)",
+            "rotateY(140deg) rotateX(297deg) translateZ(218px) translateY(-280px) translateX(47px)",
+            "rotateY(253deg) rotateX(325deg) translateZ(209px) translateY(-82px) translateX(-596px)",
+            "rotateY(226deg) rotateX(297deg) translateZ(435px) translateY(-402px) translateX(-207px)",
+            "rotateY(-114deg) rotateX(301deg) translateZ(329px) translateY(-314px) translateX(93px)",
+            "rotateY(-102deg) rotateX(389deg) translateZ(230px) translateY(415px) translateX(-219px)",
+            "rotateY(-130deg) rotateX(33deg) translateZ(478px) translateY(142px) translateX(-94px)",
+            "rotateY(-24deg) rotateX(46deg) translateZ(550px) translateY(-79px) translateX(-36px)",
+            "rotateY(47deg) rotateX(48deg) translateZ(585px) translateY(-40px) translateX(-61px)",
+            "rotateY(169deg) rotateX(29deg) translateZ(500px) translateY(-188px) translateX(-95px)"
+        ],
+        [
+            "rotateY(35deg) rotateX(329deg) translateZ(468px) translateY(-397px) translateX(111px)",
+            "rotateY(320deg) rotateX(55deg) translateZ(221px) translateY(302px) translateX(67px)",
+            "rotateY(116deg) rotateX(303deg) translateZ(197px) translateY(-568px) translateX(-431px)",
+            "rotateY(162deg) rotateX(288deg) translateZ(281px) translateY(-315px) translateX(15px)",
+            "rotateY(245deg) rotateX(374deg) translateZ(201px) translateY(153px) translateX(-596px)",
+            "rotateY(219deg) rotateX(286deg) translateZ(337px) translateY(-427px) translateX(-162px)",
+            "rotateY(-94deg) rotateX(290deg) translateZ(384px) translateY(-387px) translateX(53px)",
+            "rotateY(-94deg) rotateX(399deg) translateZ(152px) translateY(505px) translateX(-219px)",
+            "rotateY(-146deg) rotateX(49deg) translateZ(363px) translateY(252px) translateX(-56px)",
+            "rotateY(-63deg) rotateX(68deg) translateZ(224px) translateY(291px) translateX(-129px)",
+            "rotateY(63deg) rotateX(86deg) translateZ(351px) translateY(214px) translateX(-61px)",
+            "rotateY(186deg) rotateX(53deg) translateZ(433px) translateY(244px) translateX(-137px)"
+        ],
+        [
+            "rotateY(44deg) rotateX(295deg) translateZ(182px) translateY(-686px) translateX(23px)",
+            "rotateY(341deg) rotateX(71deg) translateZ(-38px) translateY(347px) translateX(9px)",
+            "rotateY(117deg) rotateX(274deg) translateZ(15px) translateY(-525px) translateX(-392px)",
+            "rotateY(162deg) rotateX(263deg) translateZ(227px) translateY(-471px) translateX(15px)",
+            "rotateY(263deg) rotateX(414deg) translateZ(-141px) translateY(95px) translateX(-671px)",
+            "rotateY(223deg) rotateX(266deg) translateZ(316px) translateY(-662px) translateX(-227px)",
+            "rotateY(-78deg) rotateX(265deg) translateZ(264px) translateY(-429px) translateX(14px)",
+            "rotateY(-97deg) rotateX(421deg) translateZ(-71px) translateY(488px) translateX(-245px)",
+            "rotateY(-144deg) rotateX(70deg) translateZ(131px) translateY(320px) translateX(-25px)",
+            "rotateY(-54deg) rotateX(92deg) translateZ(53px) translateY(333px) translateX(-147px)",
+            "rotateY(90deg) rotateX(119deg) translateZ(110px) translateY(314px) translateX(-194px)",
+	        "rotateY(190deg) rotateX(71deg) translateZ(146px) translateY(563px) translateX(-55px)"
         ],
         [
             ,
@@ -75,6 +104,7 @@ $(()=>{
             ,
             ,
             ,
+
         ],
         [
             ,
@@ -88,110 +118,7 @@ $(()=>{
             ,
             ,
             ,
-        ],
-        [
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-        ],
-        [
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-        ],
-        [
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-        ],
-        [
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-        ],
-        [
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-        ],
-        [
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-        ],
-        [
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-        ],
-        [
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
+
         ]
     ];
     /////////////////////////// 카드 파괴 변수 ///////////////////////////
@@ -267,13 +194,13 @@ $(()=>{
             let num = 0;
             for (const i of explosion[1]) {
                 card.children(`div:eq(${num})`).stop().css({
-                    transition:"1.31s",
+                    transition:"0.9s",
                     transform:i
                 });
                 num++;
             }
         }
-        else if(sctop > evtfull/15*2 && sctop <= evtfull/15*3+1){
+        else if(sctop > evtfull/15 && sctop <= evtfull/15*3+1){
             let num = 0;
             for (const i of explosion[2]) {
                 card.children(`div:eq(${num})`).stop().css({
@@ -282,18 +209,35 @@ $(()=>{
                 num++;
             }
         }
-        // else if(sctop > evtfull/15*2 && sctop <= evtfull/15*3+1{}
-        // else if(sctop > evtfull/15*3 && sctop <= evtfull/15*4+1{}
-        // else if(sctop > evtfull/15*4 && sctop <= evtfull/15*5+1{}
-        // else if(sctop > evtfull/15*5 && sctop <= evtfull/15*6+1{}
-        // else if(sctop > evtfull/15*6 && sctop <= evtfull/15*7+1{}
-        // else if(sctop > evtfull/15*7 && sctop <= evtfull/15*8+1{}
-        // else if(sctop > evtfull/15*8 && sctop <= evtfull/15*9+1{}
-        // else if(sctop > evtfull/15*9 && sctop <= evtfull/15*10+1){}
-        // else if(sctop > evtfull/15*10 && sctop <= evtfull/15*11+1){}
-        // else if(sctop > evtfull/15*11 && sctop <= evtfull/15*12+1){}
-        // else if(sctop > evtfull/15*12 && sctop <= evtfull/15*13+1){}
-        // else if(sctop > evtfull/15*13 && sctop <= evtfull/15*14+1){}
+        else if(sctop > evtfull/15*3 && sctop <= evtfull/15*5+1){
+            let num = 0;
+            for (const i of explosion[3]) {
+                card.children(`div:eq(${num})`).stop().css({
+                    transform:i
+                });
+                num++;
+            }
+        }
+        else if(sctop > evtfull/15*5 && sctop <= evtfull/15*7+1){
+            let num = 0;
+            for (const i of explosion[4]) {
+                card.children(`div:eq(${num})`).stop().css({
+                    transform:i
+                });
+                num++;
+            }
+        }
+        else if(sctop > evtfull/15*7 && sctop <= evtfull/15*9+1){
+            let num = 0;
+            for (const i of explosion[5]) {
+                card.children(`div:eq(${num})`).stop().css({
+                    transform:i
+                });
+                num++;
+            }
+        }
+        // else if(sctop > evtfull/15*9 && sctop <= evtfull/15*11+1){}
+        // else if(sctop > evtfull/15*11 && sctop <= evtfull/15*13+1){}
 
 
         /////////////////////////// 카드 파괴 ///////////////////////////
