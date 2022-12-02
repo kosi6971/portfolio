@@ -170,6 +170,7 @@ body *{
     position: absolute;
     top: 38.4%;
     left: 49.7%;
+    color: #000;
 }
 
 .txt1 .maint:last-of-type{
@@ -180,6 +181,7 @@ body *{
 
 .txt1 p+p{
     max-width: 787px;
+    color: rgb(61, 61, 61);
 }
 
 
@@ -230,6 +232,7 @@ body *{
 
 .txt2 p+p{
     max-width: 726px;
+    color: rgb(61, 61, 61);
 }
 /*********** 본문2 ***********/
 

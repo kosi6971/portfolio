@@ -93,6 +93,48 @@ $(()=>{
 	        "rotateY(190deg) rotateX(71deg) translateZ(146px) translateY(563px) translateX(-55px)"
         ],
         [
+            "rotateY(45deg) rotateX(281deg) translateZ(139px) translateY(-675px) translateX(70px)",
+            "rotateY(352deg) rotateX(58deg) translateZ(-72px) translateY(419px) translateX(-10px)",
+            "rotateY(98deg) rotateX(250deg) translateZ(165px) translateY(-484px) translateX(126px)",
+            "rotateY(185deg) rotateX(244deg) translateZ(193px) translateY(-718px) translateX(75px)",
+            "rotateY(266deg) rotateX(444deg) translateZ(-280px) translateY(-104px) translateX(-602px)",
+            "rotateY(237deg) rotateX(244deg) translateZ(213px) translateY(-1024px) translateX(-360px)",
+            "rotateY(-75deg) rotateX(242deg) translateZ(140px) translateY(-539px) translateX(-33px)",
+            "rotateY(-97deg) rotateX(438deg) translateZ(-380px) translateY(722px) translateX(-280px)",
+            "rotateY(-130deg) rotateX(88deg) translateZ(-192px) translateY(607px) translateX(-25px)",
+            "rotateY(-20deg) rotateX(119deg) translateZ(-96px) translateY(264px) translateX(-93px)",
+            "rotateY(108deg) rotateX(126deg) translateZ(16px) translateY(359px) translateX(-274px)",
+            "rotateY(195deg) rotateX(87deg) translateZ(-146px) translateY(719px) translateX(-162px)"
+        ],
+        [
+            "rotateY(49deg) rotateX(256deg) translateZ(-105px) translateY(-793px) translateX(91px)",
+            "rotateY(356deg) rotateX(44deg) translateZ(59px) translateY(489px) translateX(-74px)",
+            "rotateY(106deg) rotateX(217deg) translateZ(-65px) translateY(-680px) translateX(174px)",
+            "rotateY(187deg) rotateX(213deg) translateZ(-270px) translateY(-1120px) translateX(141px)",
+            "rotateY(270deg) rotateX(486deg) translateZ(-272px) translateY(-467px) translateX(-629px)",
+            "rotateY(240deg) rotateX(220deg) translateZ(-154px) translateY(-1111px) translateX(-375px)",
+            "rotateY(-60deg) rotateX(215deg) translateZ(-64px) translateY(-567px) translateX(-7px)",
+            "rotateY(-96deg) rotateX(459deg) translateZ(-907px) translateY(819px) translateX(-388px)",
+            "rotateY(-117deg) rotateX(101deg) translateZ(-546px) translateY(731px) translateX(-115px)",
+            "rotateY(-14deg) rotateX(129deg) translateZ(-208px) translateY(367px) translateX(-57px)",
+            "rotateY(115deg) rotateX(141deg) translateZ(-239px) translateY(377px) translateX(-274px)",
+            "rotateY(195deg) rotateX(104deg) translateZ(-486px) translateY(700px) translateX(-119px)"
+        ],
+        [
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+
+        ],
+        [
             ,
             ,
             ,
@@ -194,7 +236,7 @@ $(()=>{
             let num = 0;
             for (const i of explosion[1]) {
                 card.children(`div:eq(${num})`).stop().css({
-                    transition:"0.9s",
+                    transition:"1.31s",
                     transform:i
                 });
                 num++;
@@ -236,8 +278,27 @@ $(()=>{
                 num++;
             }
         }
-        // else if(sctop > evtfull/15*9 && sctop <= evtfull/15*11+1){}
-        // else if(sctop > evtfull/15*11 && sctop <= evtfull/15*13+1){}
+        else if(sctop > evtfull/15*9 && sctop <= evtfull/15*11+1){
+            let num = 0;
+            for (const i of explosion[6]) {
+                card.children(`div:eq(${num})`).stop().css({
+                    transform:i
+                });
+                num++;
+            }
+        }
+        else if(sctop > evtfull/15*11 && sctop <= evtfull/15*13+1){
+            let num = 0;
+            for (const i of explosion[7]) {
+                card.children(`div:eq(${num})`).stop().css({
+                    transform:i
+                });
+                num++;
+            }
+        }
+        // else if(sctop > evtfull/15*11 && sctop <= evtfull+1){}
+        // else if(sctop > evtfull/15*11 && sctop <= evtfull/15*17+1){}
+        // else if(sctop > evtfull/15*11 && sctop <= evtfull/15*19+1){}
 
 
         /////////////////////////// 카드 파괴 ///////////////////////////
