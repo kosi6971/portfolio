@@ -121,18 +121,32 @@ $(()=>{
             "rotateY(195deg) rotateX(104deg) translateZ(-486px) translateY(700px) translateX(-119px)"
         ],
         [
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-
+            "rotateY(60deg) rotateX(236deg) translateZ(-42px) translateY(-687px) translateX(87px)",
+            "rotateY(334deg) rotateX(27deg) translateZ(160px) translateY(640px) translateX(32px)",
+            "rotateY(89deg) rotateX(209deg) translateZ(-97px) translateY(-674px) translateX(222px)",
+            "rotateY(182deg) rotateX(196deg) translateZ(-615px) translateY(-1161px) translateX(211px)",
+            "rotateY(285deg) rotateX(510deg) translateZ(20px) translateY(-753px) translateX(-543px)",
+            "rotateY(272deg) rotateX(198deg) translateZ(-241px) translateY(-1125px) translateX(-872px)",
+            "rotateY(-56deg) rotateX(197deg) translateZ(-276px) translateY(-653px) translateX(-7px)",
+            "rotateY(-97deg) rotateX(475deg) translateZ(-1259px) translateY(537px) translateX(-369px)",
+            "rotateY(-104deg) rotateX(126deg) translateZ(-1120px) translateY(532px) translateX(-244px)",
+            "rotateY(-27deg) rotateX(145deg) translateZ(-409px) translateY(306px) translateX(175px)",
+            "rotateY(119deg) rotateX(158deg) translateZ(-418px) translateY(173px) translateX(-274px)",
+            "rotateY(201deg) rotateX(98deg) translateZ(-514px) translateY(750px) translateX(-309px)"
+        ],
+        [
+            "rotateY(75deg) rotateX(180deg) translateZ(-539px) translateY(-749px) translateX(214px)",
+            "rotateY(323deg) rotateX(5deg) translateZ(520px) translateY(732px) translateX(85px)",
+            "rotateY(46deg) rotateX(171deg) translateZ(-225px) translateY(-730px) translateX(522px)",
+            "rotateY(191deg) rotateX(141deg) translateZ(-1497px) translateY(-316px) translateX(-141px)",
+            "rotateY(308deg) rotateX(529deg) translateZ(459px) translateY(-1072px) translateX(-569px)",
+            "rotateY(288deg) rotateX(188deg) translateZ(-42px) translateY(-1236px) translateX(-1260px)",
+            "rotateY(-75deg) rotateX(162deg) translateZ(-686px) translateY(-496px) translateX(228px)",
+            "rotateY(-124deg) rotateX(501deg) translateZ(-1728px) translateY(-160px) translateX(170px)",
+            "rotateY(-80deg) rotateX(146deg) translateZ(-1317px) translateY(-113px) translateX(-569px)",
+            "rotateY(6deg) rotateX(159deg) translateZ(-716px) translateY(103px) translateX(-148px)",
+            "rotateY(99deg) rotateX(191deg) translateZ(-604px) translateY(-388px) translateX(104px)",
+            "rotateY(213deg) rotateX(133deg) translateZ(-698px) translateY(93px) translateX(-588px)"
         ],
         [
             ,
@@ -296,9 +310,48 @@ $(()=>{
                 num++;
             }
         }
-        // else if(sctop > evtfull/15*11 && sctop <= evtfull+1){}
-        // else if(sctop > evtfull/15*11 && sctop <= evtfull/15*17+1){}
-        // else if(sctop > evtfull/15*11 && sctop <= evtfull/15*19+1){}
+        else if(sctop > evtfull/15*13 && sctop <= evtfull+1){
+            let num = 0;
+            for (const i of explosion[8]) {
+                card.children(`div:eq(${num})`).stop().css({
+                    transform:i
+                });
+                num++;
+            }
+        }
+        // opacity 1 > .5 > 0으로 설정할 것
+        else if(sctop > evtfull && sctop <= evtfull/15*17+1){
+            let num = 0;
+            for (const i of explosion[9]) {
+                card.css({transition:"1.31s", opacity:1})
+                .children(`div:eq(${num})`).stop().css({
+                    transform:i
+                });
+                num++;
+            }
+        }
+        else if(sctop > evtfull/15*17 && sctop <= evtfull/15*19+1){
+            let num = 0;
+            for (const i of explosion[9]) {
+                card.css({opacity:.5})
+                .children(`div:eq(${num})`).stop().css({
+                    transform:i
+                });
+                num++;
+            }
+
+        }
+        else if(sctop > evtfull/15*19 && sctop <= evtfull/15*21+1){
+            let num = 0;
+            for (const i of explosion[9]) {
+                card.css({opacity:0})
+                .children(`div:eq(${num})`).stop().css({
+                    transform:i
+                });
+                num++;
+            }
+
+        }
 
 
         /////////////////////////// 카드 파괴 ///////////////////////////
