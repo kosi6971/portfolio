@@ -149,32 +149,32 @@ $(()=>{
             "rotateY(213deg) rotateX(133deg) translateZ(-698px) translateY(93px) translateX(-588px)"
         ],
         [
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-
+            "rotateY(157deg) rotateX(190deg) translateZ(-433px) translateY(-972px) translateX(-453px)",
+            "rotateY(278deg) rotateX(18deg) translateZ(146px) translateY(851px) translateX(579px)",
+            "rotateY(19deg) rotateX(197deg) translateZ(769px) translateY(-866px) translateX(574px)",
+            "rotateY(257deg) rotateX(137deg) translateZ(-1604px) translateY(-690px) translateX(-1269px)",
+            "rotateY(364deg) rotateX(548deg) translateZ(1623px) translateY(-1112px) translateX(-234px)",
+            "rotateY(321deg) rotateX(198deg) translateZ(1177px) translateY(-1279px) translateX(-1421px)",
+            "rotateY(-115deg) rotateX(144deg) translateZ(-1124px) translateY(-559px) translateX(520px)",
+            "rotateY(-152deg) rotateX(546deg) translateZ(-1295px) translateY(-1858px) translateX(1066px)",
+            "rotateY(-68deg) rotateX(183deg) translateZ(-906px) translateY(-938px) translateX(-482px)",
+            "rotateY(18deg) rotateX(193deg) translateZ(-939px) translateY(-448px) translateX(-347px)",
+            "rotateY(99deg) rotateX(217deg) translateZ(-118px) translateY(-914px) translateX(603px)",
+            "rotateY(226deg) rotateX(181deg) translateZ(-689px) translateY(-847px) translateX(-833px)"
         ],
         [
+            "rotateY(197deg) rotateX(166deg) translateZ(-454px) translateY(-1081px) translateX(-1595px)",
+            "rotateY(241deg) rotateX(4deg) translateZ(-294px) translateY(1052px) translateX(1872px)",
+            "rotateY(33deg) rotateX(205deg) translateZ(2314px) translateY(-1191px) translateX(1335px)",
             ,
+            "rotateY(381deg) rotateX(552deg) translateZ(2574px) translateY(-1544px) translateX(908px)",
             ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-
+            "rotateY(-142deg) rotateX(138deg) translateZ(-1560px) translateY(-563px) translateX(1639px)",
+            "rotateY(-66deg) rotateX(549deg) translateZ(-1556px) translateY(-1804px) translateX(326px)",
+            "rotateY(-57deg) rotateX(174deg) translateZ(-1895px) translateY(-1676px) translateX(-1375px)",
+            "rotateY(36deg) rotateX(213deg) translateZ(-1889px) translateY(-1456px) translateX(-1267px) ",
+            "rotateY(79deg) rotateX(226deg) translateZ(-204px) translateY(-1732px) translateX(1223px)",
+            "rotateY(209deg) rotateX(198deg) translateZ(1647px) translateY(432px) translateX(-2150px)"
         ]
     ];
     /////////////////////////// 카드 파괴 변수 ///////////////////////////
@@ -323,8 +323,7 @@ $(()=>{
         else if(sctop > evtfull && sctop <= evtfull/15*17+1){
             let num = 0;
             for (const i of explosion[9]) {
-                card.css({transition:"1.31s", opacity:1})
-                .children(`div:eq(${num})`).stop().css({
+                card.children(`div:eq(${num})`).stop().css({
                     transform:i
                 });
                 num++;
@@ -332,25 +331,21 @@ $(()=>{
         }
         else if(sctop > evtfull/15*17 && sctop <= evtfull/15*19+1){
             let num = 0;
-            for (const i of explosion[9]) {
-                card.css({opacity:.5})
-                .children(`div:eq(${num})`).stop().css({
+            for (const i of explosion[10]) {
+                card.children(`div:eq(${num})`).stop().css({
                     transform:i
                 });
                 num++;
             }
-
         }
         else if(sctop > evtfull/15*19 && sctop <= evtfull/15*21+1){
             let num = 0;
-            for (const i of explosion[9]) {
-                card.css({opacity:0})
-                .children(`div:eq(${num})`).stop().css({
+            for (const i of explosion[11]) {
+                card.children(`div:eq(${num})`).stop().css({
                     transform:i
                 });
                 num++;
             }
-
         }
 
 
