@@ -84,6 +84,7 @@ body *{
     border-radius: 3%;
     /* 3D 설정 */
     transform-style: preserve-3d;
+    transition: 1.31s;
 }
 
 /* 카드 이미지 넣기 */

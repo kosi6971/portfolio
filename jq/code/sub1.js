@@ -7,6 +7,7 @@ $(()=>{
     const card = $(".card_house"); // 카드집합체 변수
     const winH = $(window).height(); // 카드파괴 - 원하는 공간의 높이
     const evtfull = $(".txt1").offset().top - winH; // 시작 이벤트 넓이 - 실제 스크롤 높이
+    // 카드 위치값
     const explosion = [
         [
             "translateZ(246px) translateX(124px)",
@@ -166,9 +167,9 @@ $(()=>{
             "rotateY(197deg) rotateX(166deg) translateZ(-454px) translateY(-1081px) translateX(-1595px)",
             "rotateY(241deg) rotateX(4deg) translateZ(-294px) translateY(1052px) translateX(1872px)",
             "rotateY(33deg) rotateX(205deg) translateZ(2314px) translateY(-1191px) translateX(1335px)",
-            ,
+            "rotateY(272deg) rotateX(127deg) translateZ(-1643px) translateY(-1497px) translateX(-1913px)",
             "rotateY(381deg) rotateX(552deg) translateZ(2574px) translateY(-1544px) translateX(908px)",
-            ,
+            "rotateY(354deg) rotateX(206deg) translateZ(3469px) translateY(-1104px) translateX(-858px)",
             "rotateY(-142deg) rotateX(138deg) translateZ(-1560px) translateY(-563px) translateX(1639px)",
             "rotateY(-66deg) rotateX(549deg) translateZ(-1556px) translateY(-1804px) translateX(326px)",
             "rotateY(-57deg) rotateX(174deg) translateZ(-1895px) translateY(-1676px) translateX(-1375px)",
@@ -177,6 +178,7 @@ $(()=>{
             "rotateY(209deg) rotateX(198deg) translateZ(1647px) translateY(432px) translateX(-2150px)"
         ]
     ];
+    const opa =[0,1,1,0,1,1,0,0,0,1,1,0]; // 투명도 규칙
     /////////////////////////// 카드 파괴 변수 ///////////////////////////
 
 
@@ -237,117 +239,54 @@ $(()=>{
         }
 
         // 시작 이벤트 카드 임팩트 - 폭발
+        // 카드 이동 규칙
+        let transNum = i=>{
+            if(i == 1 || i ==2 ) i = i-1;
+            else if(i == 3) i = i;
+            else i = 2*i-3;
+
+            return i;
+        }
+
+        // 카드 이동
+        // 초기화
         if(sctop <=  0){
             let num = 0;
-            for (const i of explosion[0]) {
+            for (let i of explosion[0]) {
                 card.children(`div:eq(${num})`).stop().css({
                     transform:i
                 });
                 num++;
             }
         }
-        else if(sctop > 0 && sctop <= evtfull/15+1){
-            let num = 0;
-            for (const i of explosion[1]) {
-                card.children(`div:eq(${num})`).stop().css({
-                    transition:"1.31s",
-                    transform:i
-                });
-                num++;
-            }
-        }
-        else if(sctop > evtfull/15 && sctop <= evtfull/15*3+1){
-            let num = 0;
-            for (const i of explosion[2]) {
-                card.children(`div:eq(${num})`).stop().css({
-                    transform:i
-                });
-                num++;
-            }
-        }
-        else if(sctop > evtfull/15*3 && sctop <= evtfull/15*5+1){
-            let num = 0;
-            for (const i of explosion[3]) {
-                card.children(`div:eq(${num})`).stop().css({
-                    transform:i
-                });
-                num++;
-            }
-        }
-        else if(sctop > evtfull/15*5 && sctop <= evtfull/15*7+1){
-            let num = 0;
-            for (const i of explosion[4]) {
-                card.children(`div:eq(${num})`).stop().css({
-                    transform:i
-                });
-                num++;
-            }
-        }
-        else if(sctop > evtfull/15*7 && sctop <= evtfull/15*9+1){
-            let num = 0;
-            for (const i of explosion[5]) {
-                card.children(`div:eq(${num})`).stop().css({
-                    transform:i
-                });
-                num++;
-            }
-        }
-        else if(sctop > evtfull/15*9 && sctop <= evtfull/15*11+1){
-            let num = 0;
-            for (const i of explosion[6]) {
-                card.children(`div:eq(${num})`).stop().css({
-                    transform:i
-                });
-                num++;
-            }
-        }
-        else if(sctop > evtfull/15*11 && sctop <= evtfull/15*13+1){
-            let num = 0;
-            for (const i of explosion[7]) {
-                card.children(`div:eq(${num})`).stop().css({
-                    transform:i
-                });
-                num++;
-            }
-        }
-        else if(sctop > evtfull/15*13 && sctop <= evtfull+1){
-            let num = 0;
-            for (const i of explosion[8]) {
-                card.children(`div:eq(${num})`).stop().css({
-                    transform:i
-                });
-                num++;
-            }
-        }
-        // opacity 1 > .5 > 0으로 설정할 것
-        else if(sctop > evtfull && sctop <= evtfull/15*17+1){
-            let num = 0;
-            for (const i of explosion[9]) {
-                card.children(`div:eq(${num})`).stop().css({
-                    transform:i
-                });
-                num++;
-            }
-        }
-        else if(sctop > evtfull/15*17 && sctop <= evtfull/15*19+1){
-            let num = 0;
-            for (const i of explosion[10]) {
-                card.children(`div:eq(${num})`).stop().css({
-                    transform:i
-                });
-                num++;
-            }
-        }
-        else if(sctop > evtfull/15*19 && sctop <= evtfull/15*21+1){
-            let num = 0;
-            for (const i of explosion[11]) {
-                card.children(`div:eq(${num})`).stop().css({
-                    transform:i
-                });
-                num++;
+        // 규칙
+        for(let i=1 ; i < explosion.length ; i++){
+            if(sctop > evtfull*transNum(i)/15 && sctop <= evtfull*(2*i-1)/15+1){
+                let num = 0;
+                for (let j of explosion[i]) {
+                    card.children(`div:eq(${num})`).stop().css({
+                        transform:j
+                    });
+                    // 투명도
+                    if(i == explosion.length-3){
+                        card.find("div>div").css({opacity:"1"})
+                    }
+                    else if(i == explosion.length-2){
+                        card.find("div>div").css({opacity:".5"})
+                        // 자연스러운 투명도를 위한 규칙
+                        for (let j = 0; j < opa.length; j++) {
+                            card.children(`div:eq(${j})`).children(`div:eq(${opa[j]})`).css({opacity:"0",transition: ".9s"})
+                        }
+                    }
+                    else if(i == explosion.length-1){
+                        card.find("div>div").css({opacity:"0"})
+                    }
+                    num++;
+                }
             }
         }
 
+        
 
         /////////////////////////// 카드 파괴 ///////////////////////////
 
