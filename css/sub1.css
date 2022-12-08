@@ -193,14 +193,15 @@ body *{
 .wall {
     position: fixed;
     display: flex;
-    top: 93%;
+    top: 85%; /* 원래값 : 100% */
     left: 3.5%;
     width: 100%;
 }
 
 .wall>span{
+    position: absolute;
     margin-left: -4%;
-    width: 28%;
+    width: 23.7%;
 }
 
 .wall img{
@@ -214,10 +215,29 @@ body *{
     width: 70px;
     height: 304px;
     top: 2.9%;
-    right: 53.3%;
+    right: 55%;
     background: url(../img/climber-shadow.png) no-repeat center/cover;
 }
 
+.wall span:nth-child(1){
+    top: -748px;
+    left: 0;
+}
+.wall span:nth-child(2){
+    top: -561px;
+    left: 20%;
+}
+.wall span:nth-child(3){
+    top: -374px;
+    left: 40%;
+}
+.wall span:nth-child(4){
+    top: -187px;
+    left: 60%;
+}
+.wall span:nth-child(5){
+    left: 80%;
+}
 /*********** 벽을 타는 사람 ***********/
 
 

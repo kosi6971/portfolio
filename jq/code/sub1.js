@@ -4,9 +4,10 @@ $(()=>{
     let sctop; // 스크롤 위치 이동값
 
     /////////////////////////// 카드 파괴 변수 ///////////////////////////
+    const winH = $(window).height(); // 보이는 화면의 높이
     const card = $(".card_house"); // 카드집합체 변수
-    const winH = $(window).height(); // 카드파괴 - 원하는 공간의 높이
     const evtfull = $(".txt1").offset().top - winH; // 시작 이벤트 넓이 - 실제 스크롤 높이
+    let cardposition; // 카드 중심점 이동 위치값 변수
     // 카드 위치값
     const explosion = [
         [
@@ -182,8 +183,9 @@ $(()=>{
     /////////////////////////// 카드 파괴 변수 ///////////////////////////
 
 
-    /////////////////////////// 굴자 이벤트 변수 ///////////////////////////
+    /////////////////////////// 글자 이벤트 변수 ///////////////////////////
     const evttxt = $(".inttxt"); // 글자 변수
+    let txtposition; // 글자 이동 위치값 변수
     let scdown = 0; // 전 스크롤 위치 이동값
     let opc = 100; // 투명도 변수
     /////////////////////////// 굴자 이벤트 변수 ///////////////////////////
@@ -198,8 +200,6 @@ $(()=>{
     $(window).scroll(function(){
 
         sctop = $(this).scrollTop();
-
-        // console.log(sctop);
         
         /////////////////////////// header 변경 ///////////////////////////
         // 조정 예정 - 아직 페이지 완성 전이라 위치값을 구하기 힘들다
@@ -231,7 +231,7 @@ $(()=>{
 
 
         /////////////////////////// 카드 파괴 ///////////////////////////
-        let cardposition = winH*(sctop-winH*1.185)/evtfull;
+        cardposition = winH*(sctop-winH*1.185)/evtfull;
         
         // 시작 이벤트 카드 임팩트 - 중심점 이동
         if(sctop >= 0 && sctop <= evtfull){
@@ -285,13 +285,11 @@ $(()=>{
                 }
             }
         }
-
-        
-
         /////////////////////////// 카드 파괴 ///////////////////////////
 
-        /////////////////////////// 굴자 이벤트 ///////////////////////////
-        let txtposition = winH*(sctop-winH*1.2956)/evtfull;
+
+        /////////////////////////// 글자 이벤트 ///////////////////////////
+        txtposition = winH*(sctop-winH*1.2956)/evtfull;
 
         // 시작 이벤트 글자 임팩트 - 중심점 이동
         if(sctop >= evtfull/2 && sctop <= evtfull){
@@ -316,6 +314,30 @@ $(()=>{
         evttxt.css({opacity:opc+"%"});
 
         scdown = sctop;
-        /////////////////////////// 굴자 이벤트 ///////////////////////////
+        /////////////////////////// 글자 이벤트 ///////////////////////////
+
+
+        /////////////////////////// 벽을 타는 사람 ///////////////////////////
+        
+        const wall = $(".wall");
+        let wallEvtStart = $(".txt1").height() + $(".txt1").offset().top;
+        let wallEvtEnd = wallEvtStart + winH/2;
+        let txt2Top = $(".txt2").offset().top - wallEvtStart;
+        let wallPosition;
+
+        // wallPosition = 
+
+        // if(wallEvtStart >= 0 && sctop <= wallEvtEnd){
+        //     carwalld.css({top:-wallPosition+"px"});
+        // }
+
+        console.log(sctop);
+        console.log(winH/2);
+        console.log(wallEvtStart);
+        console.log(wallEvtEnd);
+        console.log(txt2Top);
+        
+        /////////////////////////// 벽을 타는 사람 ///////////////////////////
+
     });
 });
