@@ -1,6 +1,8 @@
 /* sub1 페이지 js - sub1.js */
 
 $(()=>{
+    console.log("로딩 완료");
+
     let sctop; // 스크롤 위치 이동값
 
     /////////////////////////// 카드 파괴 변수 ///////////////////////////
@@ -196,8 +198,22 @@ $(()=>{
     const mnbtn = $(".mnbtn div");
     /////////////////////////// header 변경 변수 ///////////////////////////
 
-    $(window).scroll(function(){
 
+    /////////////////////////// 벽을 타는 사람 변수 ///////////////////////////
+    const wall = $(".wall"); // 벽 변수
+    const wallSpn = $(".wall>span"); // 낱개 벽 변수
+    let wallEvtEnd = $(".txt1").height() + $(".txt1").offset().top; // 1차 이벤트 끝나는 지점 and 2차 이벤트 시작하는 지점
+    let wallEvtStart = wallEvtEnd - winH/2; // 1차 이벤트 시작하는 지점
+    let txt2H = $(".txt2").height() - wallEvtEnd; // 2차 이벤트가 끝나는 지점
+    let wallPosition1; // 벽 이동 위치값 변수
+    let wallPosition2; // 벽 이동 위치값 변수
+    let wallPosition3; // 벽 이동 위치값 변수
+    let wallPosition4; // 벽 이동 위치값 변수
+    let wallPosition5; // 벽 이동 위치값 변수
+    let wallSpnPosition; // 낱개 벽 이동 위치값 변수
+    /////////////////////////// 벽을 타는 사람 변수 ///////////////////////////
+
+    $(window).scroll(function(){
         sctop = $(this).scrollTop();
         
         /////////////////////////// header 변경 ///////////////////////////
@@ -230,11 +246,11 @@ $(()=>{
 
 
         /////////////////////////// 카드 파괴 ///////////////////////////
-        cardposition = winH*(sctop-winH*1.185)/evtfull;
+        cardposition = -(winH*(sctop-winH*1.185)/evtfull);
         
         // 시작 이벤트 카드 임팩트 - 중심점 이동
         if(sctop >= 0 && sctop <= evtfull){
-            card.css({top:-cardposition+"px"});
+            card.css({top:cardposition+"px"});
         }
 
         // 시작 이벤트 카드 임팩트 - 폭발
@@ -288,11 +304,11 @@ $(()=>{
 
 
         /////////////////////////// 글자 이벤트 ///////////////////////////
-        txtposition = winH*(sctop-winH*1.2956)/evtfull;
+        txtposition = -(winH*(sctop-winH*1.2956)/evtfull);
 
         // 시작 이벤트 글자 임팩트 - 중심점 이동
         if(sctop >= evtfull/2 && sctop <= evtfull){
-            evttxt.css({top:-txtposition+"px"});
+            evttxt.css({top:txtposition+"px"});
 
             // 투명도 조절
             if(scdown > sctop && opc < 100){ // 스크롤이 올라갈 경우
@@ -317,26 +333,39 @@ $(()=>{
 
 
         /////////////////////////// 벽을 타는 사람 ///////////////////////////
+        wallSpnPosition = -(wallSpn.height()*(sctop-wallEvtStart-winH/1.25)/ (winH/2));
         
-        const wall = $(".wall");
-        let wallEvtStart = $(".txt1").height() + $(".txt1").offset().top;
-        let wallEvtEnd = wallEvtStart + winH/2;
-        let txt2Top = $(".txt2").offset().top - wallEvtStart;
-        let wallPosition;
+        // 이벤트 - 중심점 이동
+        if(wallEvtStart <= sctop && sctop <= wallEvtEnd){
+            wall.css({top: wallSpnPosition+"px"});
+        }
 
-        // wallPosition = 
+        wallPosition1 =  ((wallSpn.height()*2)*((sctop-wallEvtEnd)/5+winH/4.56))/(txt2H/5);
+        wallPosition2 =  ((wallSpn.height()*2)*((sctop-wallEvtEnd)/5+winH/4.56))/(txt2H/5)+(205*1.8);
+        wallPosition3 =  ((wallSpn.height()*2)*((sctop-wallEvtEnd)/5+winH/4.56))/(txt2H/5)+(410*1.8);
+        wallPosition4 =  ((wallSpn.height()*2)*((sctop-wallEvtEnd)/5+winH/4.56))/(txt2H/5)+(615*1.8);
+        wallPosition5 =  ((wallSpn.height()*2)*((sctop-wallEvtEnd)/5+winH/4.56))/(txt2H/5)+(820*1.8);
 
-        // if(wallEvtStart >= 0 && sctop <= wallEvtEnd){
-        //     carwalld.css({top:-wallPosition+"px"});
-        // }
-
-        console.log(sctop);
-        console.log(winH/2);
-        console.log(wallEvtStart);
-        console.log(wallEvtEnd);
-        console.log(txt2Top);
-        
+        if(sctop >= wallEvtEnd){
+            $(".wall > span:eq(0)").css({top: wallPosition1+"px"});
+        }
+        if(sctop >= wallEvtEnd+205){
+            $(".wall > span:eq(1)").css({top: wallPosition2+"px"});
+        }
+        if(sctop >= wallEvtEnd+410){
+            $(".wall > span:eq(2)").css({top: wallPosition3+"px"});
+        }
+        if(sctop >= wallEvtEnd+615){
+            $(".wall > span:eq(3)").css({top: wallPosition4+"px"});
+        }
+        if(sctop >= wallEvtEnd+820){
+            $(".wall > span:eq(4)").css({top: wallPosition5+"px"});
+        }
         /////////////////////////// 벽을 타는 사람 ///////////////////////////
+
+
+
+        
 
     });
 });

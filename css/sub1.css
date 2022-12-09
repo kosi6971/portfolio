@@ -12,10 +12,6 @@ body *{
     outline: 1px solid red;
 }
 
-.sub1{
-    overflow: hidden;
-}
-
 .mn{
     position: relative;
     margin: 180px 0;
@@ -191,21 +187,26 @@ body *{
 
 /*********** 벽을 타는 사람  ***********/
 .bgc{
-    height: 258vh;
-    background: linear-gradient(transparent, white , transparent);
+    position: relative;
+    right: 200%;
+    width: 500%;
+    height: 330vh;
+    background: linear-gradient(to top,transparent 0%, white 90%, transparent 100%);
 }
 
 .wall {
     position: fixed;
     display: flex;
-    top: 196%; /* 원래값 : 100% > 85%*/
-    left: -10.7%;
+    top: 2200px;
+    left: -8.3%;
     width: 100%;
+    transition: .1s;
 }
 
 .wall>span{
     position: absolute;
-    width: 29.7%;
+    width: 26.7%;
+    transition: .1s;
 }
 
 .wall img{
@@ -224,23 +225,23 @@ body *{
 }
 
 .wall span:nth-child(1){
-    top: -924px;
+    top: -820px;
     left: 0;
 }
 .wall span:nth-child(2){
-    top: -693px;
-    left: 24.8%;
+    top: -615px;
+    left: 22.3%;
 }
 .wall span:nth-child(3){
-    top: -462px;
-    left: 49.6%;
+    top: -410px;
+    left: 44.6%;
 }
 .wall span:nth-child(4){
-    top: -231px;;
-    left: 74.4%;
+    top: -205px;
+    left: 66.9%;
 }
 .wall span:nth-child(5){
-    left: 99.2%;
+    left: 89.2%;
 }
 /*********** 벽을 타는 사람 ***********/
 

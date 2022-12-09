@@ -10,6 +10,11 @@ html, body, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, figure, p, blockquot
     padding: 0;
 }
 
+html, body{
+    overflow-x: hidden;
+    overflow-y: auto;
+} 
+
 /* ul, ol 블릿/숫자 없앰 */
 ul, ol{
     list-style: none;
