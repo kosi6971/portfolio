@@ -196,7 +196,6 @@ $(()=>{
     const mnbtn = $(".mnbtn div");
     /////////////////////////// header 변경 변수 ///////////////////////////
 
-    
     $(window).scroll(function(){
 
         sctop = $(this).scrollTop();

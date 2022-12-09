@@ -190,18 +190,22 @@ body *{
 
 
 /*********** 벽을 타는 사람  ***********/
+.bgc{
+    height: 258vh;
+    background: linear-gradient(transparent, white , transparent);
+}
+
 .wall {
     position: fixed;
     display: flex;
-    top: 85%; /* 원래값 : 100% */
-    left: 3.5%;
+    top: 196%; /* 원래값 : 100% > 85%*/
+    left: -10.7%;
     width: 100%;
 }
 
 .wall>span{
     position: absolute;
-    margin-left: -4%;
-    width: 23.7%;
+    width: 29.7%;
 }
 
 .wall img{
@@ -212,40 +216,36 @@ body *{
     position: absolute;
     display: block;
     content: '';
-    width: 70px;
-    height: 304px;
+    width: 15.5%;
+    height: 26%;
     top: 2.9%;
-    right: 55%;
+    right: 55.3%;
     background: url(../img/climber-shadow.png) no-repeat center/cover;
 }
 
 .wall span:nth-child(1){
-    top: -748px;
+    top: -924px;
     left: 0;
 }
 .wall span:nth-child(2){
-    top: -561px;
-    left: 20%;
+    top: -693px;
+    left: 24.8%;
 }
 .wall span:nth-child(3){
-    top: -374px;
-    left: 40%;
+    top: -462px;
+    left: 49.6%;
 }
 .wall span:nth-child(4){
-    top: -187px;
-    left: 60%;
+    top: -231px;;
+    left: 74.4%;
 }
 .wall span:nth-child(5){
-    left: 80%;
+    left: 99.2%;
 }
 /*********** 벽을 타는 사람 ***********/
 
 
 /*********** 본문2 ***********/
-.txt2{
-    margin-top: 258vh;
-}
-
 .txt2 .maint{
     display: inline;
     text-align: center;
