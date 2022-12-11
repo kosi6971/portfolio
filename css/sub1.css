@@ -51,6 +51,15 @@ body *{
     padding-bottom: 30px;
 }
 
+p>a{
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+p>a:hover{
+    color: rgb(202, 0, 0);
+}
 /*********** 페이지 공통 설정 ***********/
 
 
@@ -190,8 +199,16 @@ body *{
     position: relative;
     right: 200%;
     width: 500%;
-    height: 330vh;
-    background: linear-gradient(to top,transparent 0%, white 90%, transparent 100%);
+    height: 375vh;
+    background: linear-gradient(to top,white 90%, transparent);
+}
+
+.bgc2{
+    position: relative;
+    right: 200%;
+    width: 500%;
+    height: 25vh;
+    background: linear-gradient(white, transparent);
 }
 
 .wall {
@@ -260,10 +277,57 @@ body *{
 
 
 /*********** 목차 ***********/
+.pillar1_Bg{
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    top: 200px;
+}
+
+.pillar1_Bg>div{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+}
+
+.pillar1_Bg>div>div:nth-of-type(1){
+    background: url(../img/border-1.png) no-repeat;
+}
+
+.pillar1_Bg>div>div:nth-of-type(2){
+    background: url(../img/border-2.png) no-repeat;
+}
+
+.pillar1_Bg>div>div:nth-of-type(3){
+    background: url(../img/border-3.png) no-repeat;
+}
+
+.pillar1_Bg>div:nth-of-type(1){
+}
+
+.pillar1_Bg>div:nth-of-type(2){
+    
+}
+
+.pillar1_Bg>div:nth-of-type(3){
+    
+}
+
+.pillar1_Bg>div:nth-of-type(4){
+    
+}
+
+.pillar1_Bg>div:nth-of-type(5){
+    
+}
 /*********** 목차 ***********/
 
 
 /*********** 본문3 ***********/
+.txt3{
+    margin-top: 5000px;
+}
 /*********** 본문3 ***********/
 
 
