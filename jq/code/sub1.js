@@ -213,6 +213,18 @@ $(()=>{
     let wallSpnPosition; // 낱개 벽 이동 위치값 변수
     /////////////////////////// 벽을 타는 사람 변수 ///////////////////////////
 
+
+    /////////////////////////// 목차 기둥 애니메이션 변수 ///////////////////////////
+    const winW = $(window).width(); // 보이는 화면의 가로
+    const pillar1_Bg = $(".pillar1_Bg"); // 기둥 변수
+    const p_Bg_H = $(".pillar1_Bg").height(); // 기둥 세로 길이
+    const p_Bg_W = $(".pillar1_Bg").width(); // 기둥 가로 길이
+    let pvlindStart = $(".txt2").height() + $(".txt2").offset().top - winH/2; // 이벤트 시작 지점
+    let pvlindEnd = $(".txt3").offset().top - winH/2;
+    let pillar1_Bg_W; // 가로 이동 위치값 변수
+    let pillar1_Bg_H; // 세로 이동 위치값 변수
+    /////////////////////////// 목차 기둥 애니메이션 변수 ///////////////////////////
+
     $(window).scroll(function(){
         sctop = $(this).scrollTop();
         
@@ -364,8 +376,23 @@ $(()=>{
         /////////////////////////// 벽을 타는 사람 ///////////////////////////
 
 
-
+        /////////////////////////// 목차 기둥 애니메이션 ///////////////////////////
         
+        pillar1_Bg_W = -(((p_Bg_W+winW)*(sctop-pvlindStart-winW/2))/(pvlindEnd-pvlindStart+winW));
+        pillar1_Bg_H = -(((p_Bg_H+winH+200)*(sctop-pvlindStart-winH-350))/(pvlindEnd-pvlindStart));
+
+        console.log(pvlindEnd - pvlindStart);
+        if(pvlindStart<= sctop && sctop <= pvlindEnd){
+            pillar1_Bg.css({
+                top: pillar1_Bg_H+"px",
+            });
+        }
+        if(pvlindStart+200<= sctop && sctop <= pvlindEnd-700){
+            pillar1_Bg.css({
+                right: pillar1_Bg_W+"px"
+            });
+        }
+        /////////////////////////// 목차 기둥 애니메이션 ///////////////////////////
 
     });
 });
